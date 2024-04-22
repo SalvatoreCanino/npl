@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/dersa/npl/src/main.cpp",
+  "file": "/home/dersa/npl/src/main.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/endianless.dir/src/endianless.cpp.o -c /home/dersa/npl/src/endianless.cpp",
+  "file": "/home/dersa/npl/src/endianless.cpp"
+}
+]
