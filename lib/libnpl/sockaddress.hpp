@@ -1,131 +1,109 @@
-#ifndef _SOCKADRRESS_HPP_
-#define _SOCKADRRESS_HPP_
+#ifndef _SOCKADDRRESS_HPP_
+#define _SOCKADDRRESS_HPP_
 
-#include "socket.hpp"
-#include <cstddef>
-#include<cstring>
-#define INET_ADDRSTRLEN  16 
-
+#include <string>
+#include <cstring>
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <netdb.h>
 #include <arpa/inet.h>
-#include <unistd.h>
-#include <vector>
+#include <netdb.h>
+#include <system_error>
+#include <utility>
+
 
 namespace npl {
 
 template <int F>
 class sockaddress;
 
-template <>
+template<>
+class sockaddress<AF_UNIX> {
+    
+};
+
+template<>
 class sockaddress<AF_INET> {
 private:
-    socklen_t _len;
+    socklen_t   _len;
     sockaddr_in _addr;
 
 public:
-    
-    explicit sockaddress(in_port_t port = 0)
-    :_len(sizeof(sockaddr_in))
-    {
-        ::memset(&_addr, 0, _len);
-        _addr.sin_family = AF_INET;
-        _addr.sin_addr.s_addr = htonl(INADDR_ANY);
-        _addr.sin_port = htons(port);
-        
-    }
-
-    sockaddress(const sockaddr_in &_addr);
-
-    sockaddress(const in_addr &ip, in_port_t port);
-
-    sockaddress(const std::string& host, const in_port_t port)
+    explicit sockaddress(in_port_t port = 0)  // Empty socket address
     : _len(sizeof(sockaddr_in))
     {
-        struct addrinfo hint, *result;
-        hint.ai_family = AF_INET;
-        hint.ai_socktype = 0;
-        hint.ai_protocol = 0;
-        hint.ai_flags = 0;
-        if( ::getaddrinfo(host.c_str(), std::to_string(port).c_str(), &hint , &result ) != 0 )
-        {
-            throw std::system_error(errno, std::generic_category(), "getaddressinfo");
-        }
-
-        _addr = *reinterpret_cast<struct sockaddr_in*>(result->ai_addr);
-
-        freeaddrinfo(result);
-
+        memset(&_addr,0,sizeof(sockaddr_in));
+        _addr.sin_family = AF_INET;
+        _addr.sin_port   = htons(port);
+        _addr.sin_addr.s_addr = htonl(INADDR_ANY);
     }
 
+    sockaddress(const std::string& host, const in_port_t& port)
+    : _len(sizeof(sockaddr_in))
+    {
+        struct addrinfo *result; 
+        struct addrinfo hints = 
+        {
+            .ai_flags = 0,
+            .ai_family = AF_INET,
+            .ai_socktype = 0,
+            .ai_protocol = 0 
+        };
+
+        if ( (::getaddrinfo(host.c_str(), std::to_string(port).c_str(), &hints, &result ) != 0 ) )
+        {
+            throw std::system_error(errno, std::generic_category(), "getaddrinfo");
+        } 
+
+        _addr = *(reinterpret_cast<struct sockaddr_in*>(result->ai_addr));
+        freeaddrinfo(result);
+    }
 
     sockaddress(const std::string& host, const std::string& service)
     : _len(sizeof(sockaddr_in))
     {
-        struct addrinfo hint, *result;
-        hint.ai_family = AF_INET;
-        hint.ai_socktype = 0;
-        hint.ai_protocol = 0;
-        hint.ai_flags = 0;
-        if( ::getaddrinfo(host.c_str(), service.c_str(), &hint, &result) != 0 )
+        struct addrinfo *result; 
+        struct addrinfo hints = 
         {
-            throw std::system_error(errno, std::generic_category(), "getaddressinfo");
-        }
+            .ai_flags = 0,
+            .ai_family = AF_INET,
+            .ai_socktype = 0,
+            .ai_protocol = 0 
+        };
 
-        _addr = *reinterpret_cast<struct sockaddr_in*>(result->ai_addr);
+        int errcode;
+        if ( (errcode = ::getaddrinfo(host.c_str(), service.c_str(), &hints, &result ) != 0 ) )
+        {
+            throw std::system_error(errcode, std::generic_category(), "getaddrinfo");
+        } 
 
+        _addr = *(reinterpret_cast<struct sockaddr_in*>(result->ai_addr));
         freeaddrinfo(result);
-    }
-    
+    }    
+
+
     sockaddress(const sockaddress&)            = default;
     sockaddress& operator=(const sockaddress&) = default;
     sockaddress(sockaddress&&)                 = default;
     sockaddress& operator=(sockaddress&&)      = default;
     ~sockaddress()                             = default;
 
-    unsigned short port() const
+
+    in_port_t 
+    port() const
     {
-        return ntohs(_addr.sin_port);
+        return ntohs(_addr.sin_port);   
     }
 
-
-    std::string host() const    // Return the IP address in the dotted form
+    std::string
+    host() const
     {
-        char dst_str[INET_ADDRSTRLEN];
-        if(::inet_ntop(AF_INET, &_addr.sin_addr.s_addr, dst_str, INET_ADDRSTRLEN) == NULL)
+        char pres[INET_ADDRSTRLEN];
+
+        if ( ( inet_ntop(AF_INET, reinterpret_cast<const void*>(&_addr.sin_addr), pres, sizeof(pres)) ) == nullptr ) 
         {
             throw std::system_error(errno, std::generic_category(), "inet_ntop");
         }
-        return static_cast<std::string>(dst_str);
-
-    }
-
-
-    unsigned short family() const
-    {
-        return static_cast<unsigned short>(_addr.sin_family);
-    }
-
-    socklen_t len() const     // Note: const is part of the signature!
-    {
-        return _len;
-    }
-
-
-    socklen_t& len()
-    {
-        return _len;
-    }
-
-    const sockaddr& c_addr() const
-    { 
-        return reinterpret_cast<const sockaddr&>(_addr);    
-    }                            
-
-    sockaddr& c_addr()
-    {
-        return reinterpret_cast<sockaddr&>(_addr);
+        return pres;
     }
 
     std::pair<std::string, std::string> getnameinfo() const
@@ -139,8 +117,45 @@ public:
         return std::make_pair(std::string(h) ,std::string(s));
     }
 
+    unsigned short
+    family() const
+    {
+        return _addr.sin_family;
+    }
+
+    socklen_t
+    len() const
+    {
+        return _len;
+    }
+
+    socklen_t&
+    len()
+    {
+        return _len;
+    }
+
+    const sockaddr&
+    c_addr() const
+    {
+        return reinterpret_cast<const sockaddr&>(_addr);
+    }
+
+    sockaddr&
+    c_addr()
+    {
+        return reinterpret_cast<struct sockaddr&>(_addr);
+    }
+
 
 };
+
+template<>
+class sockaddress<AF_INET6> {
+
+};
+
+
 
 }
 

@@ -1,5 +1,12 @@
 /home/dersa/npl/build/CMakeFiles/main.dir
+/home/dersa/npl/build/CMakeFiles/conc.dir
 /home/dersa/npl/build/CMakeFiles/endianless.dir
+/home/dersa/npl/build/CMakeFiles/udp_srv.dir
+/home/dersa/npl/build/CMakeFiles/udp_clt.dir
+/home/dersa/npl/build/CMakeFiles/tcp_srv_naive.dir
+/home/dersa/npl/build/CMakeFiles/tcp_srv_fork.dir
+/home/dersa/npl/build/CMakeFiles/tcp_srv_multhread.dir
+/home/dersa/npl/build/CMakeFiles/tcp_clt.dir
 /home/dersa/npl/build/CMakeFiles/Experimental.dir
 /home/dersa/npl/build/CMakeFiles/Nightly.dir
 /home/dersa/npl/build/CMakeFiles/Continuous.dir

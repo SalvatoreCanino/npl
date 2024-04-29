@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/ud.dir/src/main.cpp.o -o ud 

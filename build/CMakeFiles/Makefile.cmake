@@ -54,7 +54,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
+  "CMakeFiles/conc.dir/DependInfo.cmake"
   "CMakeFiles/endianless.dir/DependInfo.cmake"
+  "CMakeFiles/udp_srv.dir/DependInfo.cmake"
+  "CMakeFiles/udp_clt.dir/DependInfo.cmake"
+  "CMakeFiles/tcp_srv_naive.dir/DependInfo.cmake"
+  "CMakeFiles/tcp_srv_fork.dir/DependInfo.cmake"
+  "CMakeFiles/tcp_srv_multhread.dir/DependInfo.cmake"
+  "CMakeFiles/tcp_clt.dir/DependInfo.cmake"
   "CMakeFiles/Experimental.dir/DependInfo.cmake"
   "CMakeFiles/Nightly.dir/DependInfo.cmake"
   "CMakeFiles/Continuous.dir/DependInfo.cmake"

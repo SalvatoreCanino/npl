@@ -20,10 +20,4 @@ int main()
 
     std::cout << addr1.getnameinfo().first <<'\t'<< addr1.getnameinfo().second << std::endl;
 
-    //////////////////////////// 22 - 04 ////////////////////////////
-
-    
-
-
-    
 }

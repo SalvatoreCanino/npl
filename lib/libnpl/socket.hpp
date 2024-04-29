@@ -124,11 +124,43 @@ public:
         return buffer(buff.begin(), buff.begin()+nbytes);
     }
 
+    std::ptrdiff_t readn(buffer& buf, ssize_t n ) const
+    {
+        std::ptrdiff_t num_read;
+        std::ptrdiff_t tot_read = 0;
+
+        while(tot_read < n)
+        {
+            num_read = ::read(_sockfd, &buf[tot_read], n - tot_read);
+
+            if (num_read == 0)
+                return tot_read;  // EOF reached;
+
+            if (num_read == - 1)  // An error has happened
+            {
+                if (errno == EINTR) 
+                    continue;     // Restart reading bytes in case of interrupt
+                else 
+                    return -1;  
+            } 
+            tot_read+= num_read;
+
+        }
+        return tot_read;
+    }
+
+    buffer readn(ssize_t len ) const
+    {
+        buffer buf(len);
+        auto tot_read = this->readn(buf,len);
+        return buffer(buf.begin(),buf.begin()+tot_read);
+    }
+
     // socket connectionless
 
     std::ptrdiff_t sendto(const buffer& buff, const sockaddress<F>& remote, int flags = 0) const
     {
-        return  sendto(_sockfd, &buff[0], buff.size(), flags, &remote.c_addr(), remote.len());
+        return  ::sendto(_sockfd, &buff[0], buff.size(), flags, &remote.c_addr(), remote.len());
     }
 
     // Versione alla C
@@ -147,17 +179,7 @@ public:
 
     }
 
-
-
-
-
 };
-
-
-
-
-
 }
-
 
 #endif

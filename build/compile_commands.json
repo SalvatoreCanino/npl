@@ -6,7 +6,42 @@
 },
 {
   "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/conc.dir/src/conc.cpp.o -c /home/dersa/npl/src/conc.cpp",
+  "file": "/home/dersa/npl/src/conc.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
   "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/endianless.dir/src/endianless.cpp.o -c /home/dersa/npl/src/endianless.cpp",
   "file": "/home/dersa/npl/src/endianless.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/udp_srv.dir/src/udp_srv.cpp.o -c /home/dersa/npl/src/udp_srv.cpp",
+  "file": "/home/dersa/npl/src/udp_srv.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/udp_clt.dir/src/udp_clt.cpp.o -c /home/dersa/npl/src/udp_clt.cpp",
+  "file": "/home/dersa/npl/src/udp_clt.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.o -c /home/dersa/npl/src/tcp_srv_naive.cpp",
+  "file": "/home/dersa/npl/src/tcp_srv_naive.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o -c /home/dersa/npl/src/tcp_srv_fork.cpp",
+  "file": "/home/dersa/npl/src/tcp_srv_fork.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o -c /home/dersa/npl/src/tcp_srv_multhread.cpp",
+  "file": "/home/dersa/npl/src/tcp_srv_multhread.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -g -std=gnu++20 -o CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o -c /home/dersa/npl/src/tcp_clt.cpp",
+  "file": "/home/dersa/npl/src/tcp_clt.cpp"
 }
 ]

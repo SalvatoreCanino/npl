@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/conc.dir/src/conc.cpp.o -o conc 

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o -o tcp_srv_multhread 

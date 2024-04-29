@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.o -o tcp_srv_naive 

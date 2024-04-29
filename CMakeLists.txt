@@ -9,7 +9,14 @@ include_directories(lib/libnpl)
 
 
 add_executable(main src/main.cpp)
+add_executable(conc src/conc.cpp)
 add_executable(endianless src/endianless.cpp)
+add_executable(udp_srv src/udp_srv.cpp)
+add_executable(udp_clt src/udp_clt.cpp)
+add_executable(tcp_srv_naive src/tcp_srv_naive.cpp)
+add_executable(tcp_srv_fork src/tcp_srv_fork.cpp)
+add_executable(tcp_srv_multhread src/tcp_srv_multhread.cpp)
+add_executable(tcp_clt src/tcp_clt.cpp)
 
 include(CTest)
 enable_testing()

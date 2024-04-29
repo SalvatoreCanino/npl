@@ -160,6 +160,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named conc
+
+# Build rule for target.
+conc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 conc
+.PHONY : conc
+
+# fast build rule for target.
+conc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conc.dir/build.make CMakeFiles/conc.dir/build
+.PHONY : conc/fast
+
+#=============================================================================
 # Target rules for targets named endianless
 
 # Build rule for target.
@@ -171,6 +184,84 @@ endianless: cmake_check_build_system
 endianless/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/endianless.dir/build.make CMakeFiles/endianless.dir/build
 .PHONY : endianless/fast
+
+#=============================================================================
+# Target rules for targets named udp_srv
+
+# Build rule for target.
+udp_srv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp_srv
+.PHONY : udp_srv
+
+# fast build rule for target.
+udp_srv/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/build
+.PHONY : udp_srv/fast
+
+#=============================================================================
+# Target rules for targets named udp_clt
+
+# Build rule for target.
+udp_clt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udp_clt
+.PHONY : udp_clt
+
+# fast build rule for target.
+udp_clt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_clt.dir/build.make CMakeFiles/udp_clt.dir/build
+.PHONY : udp_clt/fast
+
+#=============================================================================
+# Target rules for targets named tcp_srv_naive
+
+# Build rule for target.
+tcp_srv_naive: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcp_srv_naive
+.PHONY : tcp_srv_naive
+
+# fast build rule for target.
+tcp_srv_naive/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_naive.dir/build.make CMakeFiles/tcp_srv_naive.dir/build
+.PHONY : tcp_srv_naive/fast
+
+#=============================================================================
+# Target rules for targets named tcp_srv_fork
+
+# Build rule for target.
+tcp_srv_fork: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcp_srv_fork
+.PHONY : tcp_srv_fork
+
+# fast build rule for target.
+tcp_srv_fork/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_fork.dir/build.make CMakeFiles/tcp_srv_fork.dir/build
+.PHONY : tcp_srv_fork/fast
+
+#=============================================================================
+# Target rules for targets named tcp_srv_multhread
+
+# Build rule for target.
+tcp_srv_multhread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcp_srv_multhread
+.PHONY : tcp_srv_multhread
+
+# fast build rule for target.
+tcp_srv_multhread/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_multhread.dir/build.make CMakeFiles/tcp_srv_multhread.dir/build
+.PHONY : tcp_srv_multhread/fast
+
+#=============================================================================
+# Target rules for targets named tcp_clt
+
+# Build rule for target.
+tcp_clt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tcp_clt
+.PHONY : tcp_clt
+
+# fast build rule for target.
+tcp_clt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_clt.dir/build.make CMakeFiles/tcp_clt.dir/build
+.PHONY : tcp_clt/fast
 
 #=============================================================================
 # Target rules for targets named Experimental
@@ -536,6 +627,30 @@ ContinuousSubmit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
+src/conc.o: src/conc.cpp.o
+.PHONY : src/conc.o
+
+# target to build an object file
+src/conc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conc.dir/build.make CMakeFiles/conc.dir/src/conc.cpp.o
+.PHONY : src/conc.cpp.o
+
+src/conc.i: src/conc.cpp.i
+.PHONY : src/conc.i
+
+# target to preprocess a source file
+src/conc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conc.dir/build.make CMakeFiles/conc.dir/src/conc.cpp.i
+.PHONY : src/conc.cpp.i
+
+src/conc.s: src/conc.cpp.s
+.PHONY : src/conc.s
+
+# target to generate assembly for a file
+src/conc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conc.dir/build.make CMakeFiles/conc.dir/src/conc.cpp.s
+.PHONY : src/conc.cpp.s
+
 src/endianless.o: src/endianless.cpp.o
 .PHONY : src/endianless.o
 
@@ -584,6 +699,150 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/tcp_clt.o: src/tcp_clt.cpp.o
+.PHONY : src/tcp_clt.o
+
+# target to build an object file
+src/tcp_clt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_clt.dir/build.make CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o
+.PHONY : src/tcp_clt.cpp.o
+
+src/tcp_clt.i: src/tcp_clt.cpp.i
+.PHONY : src/tcp_clt.i
+
+# target to preprocess a source file
+src/tcp_clt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_clt.dir/build.make CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.i
+.PHONY : src/tcp_clt.cpp.i
+
+src/tcp_clt.s: src/tcp_clt.cpp.s
+.PHONY : src/tcp_clt.s
+
+# target to generate assembly for a file
+src/tcp_clt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_clt.dir/build.make CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.s
+.PHONY : src/tcp_clt.cpp.s
+
+src/tcp_srv_fork.o: src/tcp_srv_fork.cpp.o
+.PHONY : src/tcp_srv_fork.o
+
+# target to build an object file
+src/tcp_srv_fork.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_fork.dir/build.make CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o
+.PHONY : src/tcp_srv_fork.cpp.o
+
+src/tcp_srv_fork.i: src/tcp_srv_fork.cpp.i
+.PHONY : src/tcp_srv_fork.i
+
+# target to preprocess a source file
+src/tcp_srv_fork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_fork.dir/build.make CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.i
+.PHONY : src/tcp_srv_fork.cpp.i
+
+src/tcp_srv_fork.s: src/tcp_srv_fork.cpp.s
+.PHONY : src/tcp_srv_fork.s
+
+# target to generate assembly for a file
+src/tcp_srv_fork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_fork.dir/build.make CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.s
+.PHONY : src/tcp_srv_fork.cpp.s
+
+src/tcp_srv_multhread.o: src/tcp_srv_multhread.cpp.o
+.PHONY : src/tcp_srv_multhread.o
+
+# target to build an object file
+src/tcp_srv_multhread.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_multhread.dir/build.make CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o
+.PHONY : src/tcp_srv_multhread.cpp.o
+
+src/tcp_srv_multhread.i: src/tcp_srv_multhread.cpp.i
+.PHONY : src/tcp_srv_multhread.i
+
+# target to preprocess a source file
+src/tcp_srv_multhread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_multhread.dir/build.make CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.i
+.PHONY : src/tcp_srv_multhread.cpp.i
+
+src/tcp_srv_multhread.s: src/tcp_srv_multhread.cpp.s
+.PHONY : src/tcp_srv_multhread.s
+
+# target to generate assembly for a file
+src/tcp_srv_multhread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_multhread.dir/build.make CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.s
+.PHONY : src/tcp_srv_multhread.cpp.s
+
+src/tcp_srv_naive.o: src/tcp_srv_naive.cpp.o
+.PHONY : src/tcp_srv_naive.o
+
+# target to build an object file
+src/tcp_srv_naive.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_naive.dir/build.make CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.o
+.PHONY : src/tcp_srv_naive.cpp.o
+
+src/tcp_srv_naive.i: src/tcp_srv_naive.cpp.i
+.PHONY : src/tcp_srv_naive.i
+
+# target to preprocess a source file
+src/tcp_srv_naive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_naive.dir/build.make CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.i
+.PHONY : src/tcp_srv_naive.cpp.i
+
+src/tcp_srv_naive.s: src/tcp_srv_naive.cpp.s
+.PHONY : src/tcp_srv_naive.s
+
+# target to generate assembly for a file
+src/tcp_srv_naive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_naive.dir/build.make CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.s
+.PHONY : src/tcp_srv_naive.cpp.s
+
+src/udp_clt.o: src/udp_clt.cpp.o
+.PHONY : src/udp_clt.o
+
+# target to build an object file
+src/udp_clt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_clt.dir/build.make CMakeFiles/udp_clt.dir/src/udp_clt.cpp.o
+.PHONY : src/udp_clt.cpp.o
+
+src/udp_clt.i: src/udp_clt.cpp.i
+.PHONY : src/udp_clt.i
+
+# target to preprocess a source file
+src/udp_clt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_clt.dir/build.make CMakeFiles/udp_clt.dir/src/udp_clt.cpp.i
+.PHONY : src/udp_clt.cpp.i
+
+src/udp_clt.s: src/udp_clt.cpp.s
+.PHONY : src/udp_clt.s
+
+# target to generate assembly for a file
+src/udp_clt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_clt.dir/build.make CMakeFiles/udp_clt.dir/src/udp_clt.cpp.s
+.PHONY : src/udp_clt.cpp.s
+
+src/udp_srv.o: src/udp_srv.cpp.o
+.PHONY : src/udp_srv.o
+
+# target to build an object file
+src/udp_srv.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/src/udp_srv.cpp.o
+.PHONY : src/udp_srv.cpp.o
+
+src/udp_srv.i: src/udp_srv.cpp.i
+.PHONY : src/udp_srv.i
+
+# target to preprocess a source file
+src/udp_srv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/src/udp_srv.cpp.i
+.PHONY : src/udp_srv.cpp.i
+
+src/udp_srv.s: src/udp_srv.cpp.s
+.PHONY : src/udp_srv.s
+
+# target to generate assembly for a file
+src/udp_srv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/src/udp_srv.cpp.s
+.PHONY : src/udp_srv.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -623,14 +882,42 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... conc"
 	@echo "... endianless"
 	@echo "... main"
+	@echo "... tcp_clt"
+	@echo "... tcp_srv_fork"
+	@echo "... tcp_srv_multhread"
+	@echo "... tcp_srv_naive"
+	@echo "... udp_clt"
+	@echo "... udp_srv"
+	@echo "... src/conc.o"
+	@echo "... src/conc.i"
+	@echo "... src/conc.s"
 	@echo "... src/endianless.o"
 	@echo "... src/endianless.i"
 	@echo "... src/endianless.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/tcp_clt.o"
+	@echo "... src/tcp_clt.i"
+	@echo "... src/tcp_clt.s"
+	@echo "... src/tcp_srv_fork.o"
+	@echo "... src/tcp_srv_fork.i"
+	@echo "... src/tcp_srv_fork.s"
+	@echo "... src/tcp_srv_multhread.o"
+	@echo "... src/tcp_srv_multhread.i"
+	@echo "... src/tcp_srv_multhread.s"
+	@echo "... src/tcp_srv_naive.o"
+	@echo "... src/tcp_srv_naive.i"
+	@echo "... src/tcp_srv_naive.s"
+	@echo "... src/udp_clt.o"
+	@echo "... src/udp_clt.i"
+	@echo "... src/udp_clt.s"
+	@echo "... src/udp_srv.o"
+	@echo "... src/udp_srv.i"
+	@echo "... src/udp_srv.s"
 .PHONY : help
 
 

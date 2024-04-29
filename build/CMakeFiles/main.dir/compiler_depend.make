@@ -205,18 +205,19 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   ../lib/libnpl/sockaddress.hpp \
-  ../lib/libnpl/socket.hpp \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
+  /usr/include/arpa/inet.h \
   /usr/include/netdb.h \
   /usr/include/rpc/netdb.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
   /usr/include/x86_64-linux-gnu/bits/netdb.h \
-  /usr/include/arpa/inet.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
@@ -263,6 +264,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/c++/11/ostream:
+
+/usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/x86_64-linux-gnu/bits/netdb.h:
 
@@ -537,6 +540,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/string:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/c++/11/utility:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
 
