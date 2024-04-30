@@ -1,5 +1,6 @@
 #ifndef _SOCKET_HPP_
 #define _SOCKET_HPP_
+#include <asm-generic/socket.h>
 #include <cstddef>
 #include <cstdint>
 #include <system_error>
@@ -185,6 +186,16 @@ public:
     {
        int optval = 1;
        int out = ::setsockopt(_sockfd, SOL_SOCKET, SO_BROADCAST, &optval, sizeof(optval));
+       if (out == -1) {
+          throw std::system_error(errno,std::generic_category(),"broadcast_enable");
+       }
+       return out;
+    }  
+
+    int set_reuseaddr() 
+    {
+       int optval = 1;
+       int out = ::setsockopt(_sockfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
        if (out == -1) {
           throw std::system_error(errno,std::generic_category(),"broadcast_enable");
        }

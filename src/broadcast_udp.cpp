@@ -39,7 +39,7 @@ int main(){
     New_Broadcast_Server nbs { 
         .name = "Collegati qui", 
         .address = "172.168.1.0", 
-        .port = 90 
+        .port = 18000 
     };
 
     json jnbs = nbs;
@@ -51,13 +51,8 @@ int main(){
 
     npl::sockaddress<AF_INET> broadcast("255.255.255.255", 20000);
     
-    //unsigned char i = 'a';
-    
     for(;;)
     {
-        /*sock.sendto(npl::buffer{i}, broadcast);
-        i++;
-        std::cout<< i<< std::endl;*/
         sock.sendto(npl::buffer(sjnbs.begin(),sjnbs.end()), broadcast);
         sleep(2);
     }
