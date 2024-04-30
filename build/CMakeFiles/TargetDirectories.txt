@@ -7,6 +7,7 @@
 /home/dersa/npl/build/CMakeFiles/tcp_srv_fork.dir
 /home/dersa/npl/build/CMakeFiles/tcp_srv_multhread.dir
 /home/dersa/npl/build/CMakeFiles/tcp_clt.dir
+/home/dersa/npl/build/CMakeFiles/broadcast_udp.dir
 /home/dersa/npl/build/CMakeFiles/Experimental.dir
 /home/dersa/npl/build/CMakeFiles/Nightly.dir
 /home/dersa/npl/build/CMakeFiles/Continuous.dir

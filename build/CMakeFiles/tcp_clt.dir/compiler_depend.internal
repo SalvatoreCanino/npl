@@ -220,7 +220,7 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o
  /usr/include/c++/11/bits/stl_bvector.h
  /usr/include/c++/11/bits/vector.tcc
  /home/dersa/npl/lib/libnpl/sockaddress.hpp
- /home/dersa/npl/lib/libnpl/wrap.hpp
+ /home/dersa/npl/lib/libnpl/header.hpp
  /home/dersa/npl/lib/libnpl/socket.hpp
  /usr/include/c++/11/iostream
  /usr/include/c++/11/ostream

@@ -281,7 +281,7 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
   /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  ../lib/libnpl/wrap.hpp \
+  ../lib/libnpl/header.hpp \
   ../lib/libnpl/socket.hpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
   /usr/include/c++/11/cassert \
@@ -717,7 +717,7 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/c++/11/cassert:
 
-../lib/libnpl/wrap.hpp:
+../lib/libnpl/header.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
 

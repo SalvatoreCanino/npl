@@ -62,6 +62,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/tcp_srv_fork.dir/DependInfo.cmake"
   "CMakeFiles/tcp_srv_multhread.dir/DependInfo.cmake"
   "CMakeFiles/tcp_clt.dir/DependInfo.cmake"
+  "CMakeFiles/broadcast_udp.dir/DependInfo.cmake"
   "CMakeFiles/Experimental.dir/DependInfo.cmake"
   "CMakeFiles/Nightly.dir/DependInfo.cmake"
   "CMakeFiles/Continuous.dir/DependInfo.cmake"

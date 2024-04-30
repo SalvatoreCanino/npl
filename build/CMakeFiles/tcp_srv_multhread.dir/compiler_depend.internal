@@ -282,7 +282,7 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o
  /usr/include/x86_64-linux-gnu/sys/time.h
  /usr/include/semaphore.h
  /usr/include/x86_64-linux-gnu/bits/semaphore.h
- /home/dersa/npl/lib/libnpl/wrap.hpp
+ /home/dersa/npl/lib/libnpl/header.hpp
  /home/dersa/npl/lib/libnpl/socket.hpp
  /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h
  /usr/include/c++/11/cassert

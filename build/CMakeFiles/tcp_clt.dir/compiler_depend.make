@@ -219,7 +219,7 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   ../lib/libnpl/sockaddress.hpp \
-  ../lib/libnpl/wrap.hpp \
+  ../lib/libnpl/header.hpp \
   ../lib/libnpl/socket.hpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
@@ -869,8 +869,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/streambuf:
 
-../lib/libnpl/wrap.hpp:
-
 /usr/include/c++/11/bits/regex_executor.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
@@ -1357,6 +1355,10 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
+../lib/libnpl/header.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
 /usr/include/c++/11/ostream:
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
@@ -1382,8 +1384,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 /usr/include/c++/11/cwctype:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/c++/11/bits/this_thread_sleep.h:
 

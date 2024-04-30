@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 include_directories(lib/libnpl)
+include_directories(lib/nlohmann)
 
 
 add_executable(main src/main.cpp)
@@ -17,6 +18,7 @@ add_executable(tcp_srv_naive src/tcp_srv_naive.cpp)
 add_executable(tcp_srv_fork src/tcp_srv_fork.cpp)
 add_executable(tcp_srv_multhread src/tcp_srv_multhread.cpp)
 add_executable(tcp_clt src/tcp_clt.cpp)
+add_executable(broadcast_udp src/broadcast_udp.cpp)
 
 include(CTest)
 enable_testing()

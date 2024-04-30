@@ -15,7 +15,7 @@ namespace npl {
         uint8_t raw[2];
     };
 
-    void wrap(npl::buffer& buff)
+    void wraphdr(npl::buffer& buff)
     {
         mess_hdr m { htons(buff.size()) };
         buff.insert(buff.begin() , m.raw, m.raw+2);

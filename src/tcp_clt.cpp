@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
         std::getline(std::cin, mex);
         
         npl::buffer buff(mex.begin(),mex.end());
-        npl::wrap(buff);
+        npl::wraphdr(buff);
 
         std::cout<<"buff:\t"<<std::string(buff.begin(),buff.end())<<std::endl;
 
