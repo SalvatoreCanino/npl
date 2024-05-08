@@ -7,6 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 include_directories(lib/libnpl)
 include_directories(lib/nlohmann)
+include_directories(lib/libchat)
 
 
 add_executable(main src/main.cpp)
@@ -24,6 +25,8 @@ add_executable(unix_srv src/unix_srv.cpp)
 add_executable(unix_clt src/unix_clt.cpp)
 add_executable(l3_sniff src/l3_sniff.cpp)
 add_executable(l2_mt_sniff src/l2_mt_sniff.cpp)
+
+add_executable(srv chatroom/srv.cpp)
 
 
 include(CTest)

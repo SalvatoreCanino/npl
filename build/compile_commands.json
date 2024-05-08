@@ -1,77 +1,82 @@
 [
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/dersa/npl/src/main.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/dersa/npl/src/main.cpp",
   "file": "/home/dersa/npl/src/main.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/conc.dir/src/conc.cpp.o -c /home/dersa/npl/src/conc.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/conc.dir/src/conc.cpp.o -c /home/dersa/npl/src/conc.cpp",
   "file": "/home/dersa/npl/src/conc.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/endianless.dir/src/endianless.cpp.o -c /home/dersa/npl/src/endianless.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/endianless.dir/src/endianless.cpp.o -c /home/dersa/npl/src/endianless.cpp",
   "file": "/home/dersa/npl/src/endianless.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/udp_srv.dir/src/udp_srv.cpp.o -c /home/dersa/npl/src/udp_srv.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/udp_srv.dir/src/udp_srv.cpp.o -c /home/dersa/npl/src/udp_srv.cpp",
   "file": "/home/dersa/npl/src/udp_srv.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/udp_clt.dir/src/udp_clt.cpp.o -c /home/dersa/npl/src/udp_clt.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/udp_clt.dir/src/udp_clt.cpp.o -c /home/dersa/npl/src/udp_clt.cpp",
   "file": "/home/dersa/npl/src/udp_clt.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.o -c /home/dersa/npl/src/tcp_srv_naive.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.o -c /home/dersa/npl/src/tcp_srv_naive.cpp",
   "file": "/home/dersa/npl/src/tcp_srv_naive.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o -c /home/dersa/npl/src/tcp_srv_fork.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o -c /home/dersa/npl/src/tcp_srv_fork.cpp",
   "file": "/home/dersa/npl/src/tcp_srv_fork.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o -c /home/dersa/npl/src/tcp_srv_multhread.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o -c /home/dersa/npl/src/tcp_srv_multhread.cpp",
   "file": "/home/dersa/npl/src/tcp_srv_multhread.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o -c /home/dersa/npl/src/tcp_clt.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o -c /home/dersa/npl/src/tcp_clt.cpp",
   "file": "/home/dersa/npl/src/tcp_clt.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/broadcast_udp.dir/src/broadcast_udp.cpp.o -c /home/dersa/npl/src/broadcast_udp.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/broadcast_udp.dir/src/broadcast_udp.cpp.o -c /home/dersa/npl/src/broadcast_udp.cpp",
   "file": "/home/dersa/npl/src/broadcast_udp.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/broadcast_usr.dir/src/broadcast_usr.cpp.o -c /home/dersa/npl/src/broadcast_usr.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/broadcast_usr.dir/src/broadcast_usr.cpp.o -c /home/dersa/npl/src/broadcast_usr.cpp",
   "file": "/home/dersa/npl/src/broadcast_usr.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/unix_srv.dir/src/unix_srv.cpp.o -c /home/dersa/npl/src/unix_srv.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/unix_srv.dir/src/unix_srv.cpp.o -c /home/dersa/npl/src/unix_srv.cpp",
   "file": "/home/dersa/npl/src/unix_srv.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/unix_clt.dir/src/unix_clt.cpp.o -c /home/dersa/npl/src/unix_clt.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/unix_clt.dir/src/unix_clt.cpp.o -c /home/dersa/npl/src/unix_clt.cpp",
   "file": "/home/dersa/npl/src/unix_clt.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/l3_sniff.dir/src/l3_sniff.cpp.o -c /home/dersa/npl/src/l3_sniff.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/l3_sniff.dir/src/l3_sniff.cpp.o -c /home/dersa/npl/src/l3_sniff.cpp",
   "file": "/home/dersa/npl/src/l3_sniff.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",
-  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/l2_mt_sniff.dir/src/l2_mt_sniff.cpp.o -c /home/dersa/npl/src/l2_mt_sniff.cpp",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/l2_mt_sniff.dir/src/l2_mt_sniff.cpp.o -c /home/dersa/npl/src/l2_mt_sniff.cpp",
   "file": "/home/dersa/npl/src/l2_mt_sniff.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/srv.dir/chatroom/srv.cpp.o -c /home/dersa/npl/chatroom/srv.cpp",
+  "file": "/home/dersa/npl/chatroom/srv.cpp"
 }
 ]

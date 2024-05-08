@@ -342,6 +342,19 @@ l2_mt_sniff/fast:
 .PHONY : l2_mt_sniff/fast
 
 #=============================================================================
+# Target rules for targets named srv
+
+# Build rule for target.
+srv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srv
+.PHONY : srv
+
+# fast build rule for target.
+srv/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/build
+.PHONY : srv/fast
+
+#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -704,6 +717,30 @@ ContinuousSubmit: cmake_check_build_system
 ContinuousSubmit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
+
+chatroom/srv.o: chatroom/srv.cpp.o
+.PHONY : chatroom/srv.o
+
+# target to build an object file
+chatroom/srv.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/chatroom/srv.cpp.o
+.PHONY : chatroom/srv.cpp.o
+
+chatroom/srv.i: chatroom/srv.cpp.i
+.PHONY : chatroom/srv.i
+
+# target to preprocess a source file
+chatroom/srv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/chatroom/srv.cpp.i
+.PHONY : chatroom/srv.cpp.i
+
+chatroom/srv.s: chatroom/srv.cpp.s
+.PHONY : chatroom/srv.s
+
+# target to generate assembly for a file
+chatroom/srv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/chatroom/srv.cpp.s
+.PHONY : chatroom/srv.cpp.s
 
 src/broadcast_udp.o: src/broadcast_udp.cpp.o
 .PHONY : src/broadcast_udp.o
@@ -1111,6 +1148,7 @@ help:
 	@echo "... l2_mt_sniff"
 	@echo "... l3_sniff"
 	@echo "... main"
+	@echo "... srv"
 	@echo "... tcp_clt"
 	@echo "... tcp_srv_fork"
 	@echo "... tcp_srv_multhread"
@@ -1119,6 +1157,9 @@ help:
 	@echo "... udp_srv"
 	@echo "... unix_clt"
 	@echo "... unix_srv"
+	@echo "... chatroom/srv.o"
+	@echo "... chatroom/srv.i"
+	@echo "... chatroom/srv.s"
 	@echo "... src/broadcast_udp.o"
 	@echo "... src/broadcast_udp.i"
 	@echo "... src/broadcast_udp.s"
