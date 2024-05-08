@@ -156,22 +156,15 @@ CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/dersa/npl/lib/libnpl/socket.hpp /usr/include/asm-generic/socket.h \
- /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
- /usr/include/asm-generic/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
- /usr/include/asm-generic/bitsperlong.h \
- /usr/include/x86_64-linux-gnu/asm/sockios.h \
- /usr/include/asm-generic/sockios.h /usr/include/c++/11/cstddef \
+ /home/dersa/npl/lib/libnpl/socket.hpp /usr/include/c++/11/cstddef \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/c++/11/vector \
+ /usr/include/linux/close_range.h /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
@@ -182,13 +175,28 @@ CMakeFiles/tcp_srv_naive.dir/src/tcp_srv_naive.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
  /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
  /usr/include/x86_64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /home/dersa/npl/lib/libnpl/sockaddress.hpp /usr/include/c++/11/cstring \
- /usr/include/string.h /usr/include/strings.h /usr/include/netinet/in.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/arpa/inet.h \
- /usr/include/netdb.h /usr/include/rpc/netdb.h \
+ /usr/include/string.h /usr/include/strings.h /usr/include/net/if.h \
+ /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h \
+ /usr/include/arpa/inet.h /usr/include/netdb.h /usr/include/rpc/netdb.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/netdb.h /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h \
- /home/dersa/npl/lib/libnpl/sockaddress.hpp
+ /usr/include/x86_64-linux-gnu/bits/netdb.h \
+ /usr/include/x86_64-linux-gnu/sys/un.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/linux/if_packet.h \
+ /usr/include/x86_64-linux-gnu/asm/byteorder.h \
+ /usr/include/linux/byteorder/little_endian.h /usr/include/linux/types.h \
+ /usr/include/x86_64-linux-gnu/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/linux/swab.h /usr/include/x86_64-linux-gnu/asm/swab.h \
+ /usr/include/linux/if_ether.h /home/dersa/npl/lib/libnpl/sockaddress.hpp

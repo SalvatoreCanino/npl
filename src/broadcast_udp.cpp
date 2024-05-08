@@ -38,16 +38,14 @@ int main(){
     // Invia messaggi in automatico
     New_Broadcast_Server nbs { 
         .name = "Collegati qui", 
-        .address = "172.168.1.0", 
-        .port = 18000 
+        .address = "0.0.0.0", 
+        .port = 15000 
     };
 
     json jnbs = nbs;
 
     // così si può serializzare e inviare
     std::string sjnbs = jnbs.dump();
-
-    //std::cout << sjnbs << std::endl;
 
     npl::sockaddress<AF_INET> broadcast("255.255.255.255", 20000);
     

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/unix_usr.dir/src/unix_usr.cpp.o -o unix_usr 

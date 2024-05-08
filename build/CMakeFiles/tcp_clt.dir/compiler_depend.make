@@ -185,6 +185,7 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
   /usr/include/x86_64-linux-gnu/asm/sockios.h \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+  /usr/include/net/if.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
   /usr/include/arpa/inet.h \
@@ -193,6 +194,7 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
   /usr/include/x86_64-linux-gnu/bits/netdb.h \
+  /usr/include/x86_64-linux-gnu/sys/un.h \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
   /usr/include/c++/11/stdexcept \
@@ -203,26 +205,8 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
   /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/utility \
   /usr/include/c++/11/bits/stl_relops.h \
-  ../lib/libnpl/socket.hpp \
-  /usr/include/c++/11/cstddef \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
-  ../lib/libnpl/sockaddress.hpp \
-  ../lib/libnpl/header.hpp \
-  ../lib/libnpl/socket.hpp \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/istream \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/bits/ios_base.h \
   /usr/include/c++/11/bits/locale_classes.h \
@@ -239,9 +223,39 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/ostream \
   /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/linux/if_packet.h \
+  /usr/include/x86_64-linux-gnu/asm/byteorder.h \
+  /usr/include/linux/byteorder/little_endian.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/linux/swab.h \
+  /usr/include/x86_64-linux-gnu/asm/swab.h \
+  /usr/include/linux/if_ether.h \
+  ../lib/libnpl/socket.hpp \
+  /usr/include/c++/11/cstddef \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  ../lib/libnpl/sockaddress.hpp \
+  ../lib/libnpl/wrap-read.hpp \
+  ../lib/libnpl/socket.hpp \
+  /usr/include/c++/11/iostream \
   /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
@@ -310,8 +324,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
   /usr/include/c++/11/ctime \
   /usr/include/c++/11/ccomplex \
   /usr/include/c++/11/complex \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/cfenv \
   /usr/include/c++/11/fenv.h \
   /usr/include/fenv.h \
@@ -683,10 +695,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/fenv.h:
 
-/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
-
-/usr/include/c++/11/sstream:
-
 /usr/include/c++/11/ctime:
 
 /usr/include/x86_64-linux-gnu/bits/signal_ext.h:
@@ -696,8 +704,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
@@ -775,9 +781,27 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/c++/11/bits/valarray_before.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
 /usr/include/pthread.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
+
+/usr/include/c++/11/bits/shared_ptr_base.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/c++/11/bits/basic_string.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -829,6 +853,8 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
+/usr/include/x86_64-linux-gnu/sys/un.h:
+
 /usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
@@ -857,6 +883,8 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/bits/localefwd.h:
 
+/usr/include/linux/swab.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
 /usr/include/x86_64-linux-gnu/asm/unistd.h:
@@ -872,8 +900,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 /usr/include/c++/11/bits/regex_executor.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/c++/11/cassert:
 
@@ -925,8 +951,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
 /usr/include/unistd.h:
 
 /usr/include/c++/11/bits/stl_algobase.h:
@@ -949,6 +973,10 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/bits/char_traits.h:
 
+/usr/include/c++/11/ciso646:
+
+/usr/include/asm-generic/errno-base.h:
+
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
@@ -960,6 +988,10 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 /usr/include/c++/11/bits/stringfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/c++/11/string:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
@@ -979,9 +1011,9 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/bits/ranges_cmp.h:
 
-/usr/include/linux/close_range.h:
+/usr/include/net/if.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+/usr/include/linux/close_range.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
@@ -995,9 +1027,11 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/usr/include/c++/11/bits/valarray_before.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+../src/tcp_clt.cpp:
 
 /usr/include/c++/11/span:
 
@@ -1020,6 +1054,12 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 /usr/include/c++/11/bits/shared_ptr.h:
 
 /usr/include/c++/11/bits/stl_construct.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/usr/include/c++/11/debug/debug.h:
+
+/usr/include/features-time64.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -1073,11 +1113,23 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/bits/ostream.tcc:
 
+/usr/include/c++/11/bits/stl_algo.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/linux/if_ether.h:
+
 /usr/include/c++/11/bits/ranges_algo.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/11/bits/stl_iterator.h:
+
+/usr/include/c++/11/climits:
+
+/usr/include/c++/11/bits/sstream.tcc:
+
+/usr/include/c++/11/new:
 
 /usr/include/c++/11/locale:
 
@@ -1097,14 +1149,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/stdint.h:
 
-/usr/include/c++/11/bits/shared_ptr_base.h:
-
-/usr/include/c++/11/bits/basic_string.h:
-
-/usr/include/linux/limits.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/netinet/in.h:
@@ -1118,12 +1162,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 /usr/include/c++/11/bits/ranges_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
-
-../src/tcp_clt.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -1203,10 +1241,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/cstdio:
 
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/c++/11/ciso646:
-
 /usr/include/stdio.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
@@ -1235,6 +1269,8 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
+/usr/include/linux/if_packet.h:
+
 /usr/include/c++/11/bits/charconv.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
@@ -1259,11 +1295,19 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
+/usr/include/asm-generic/types.h:
+
 /usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/asm-generic/bitsperlong.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/c++/11/cstring:
+
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
 
 /usr/include/c++/11/bits/vector.tcc:
 
@@ -1290,6 +1334,8 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/c++/11/bits/locale_facets.h:
+
+/usr/include/x86_64-linux-gnu/asm/swab.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
 
@@ -1321,45 +1367,17 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/bits/nested_exception.h:
 
-/usr/include/c++/11/debug/debug.h:
+/usr/include/c++/11/bits/regex_compiler.tcc:
 
-/usr/include/features-time64.h:
+/usr/include/limits.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+/usr/include/c++/11/bits/stl_relops.h:
 
-/usr/include/c++/11/bits/ranges_algobase.h:
+/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+/usr/include/c++/11/sstream:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
-
-/usr/include/c++/11/bits/exception_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/include/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/c++/11/coroutine:
-
-/usr/include/c++/11/vector:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/include/c++/11/bits/stl_uninitialized.h:
-
-../lib/libnpl/header.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
-
-/usr/include/c++/11/ostream:
+/usr/include/c++/11/istream:
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
 
@@ -1383,7 +1401,11 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/cwctype:
 
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
 /usr/include/c++/11/bits/streambuf_iterator.h:
+
+/usr/include/linux/byteorder/little_endian.h:
 
 /usr/include/c++/11/bits/this_thread_sleep.h:
 
@@ -1391,17 +1413,49 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
-/usr/include/c++/11/istream:
+/usr/include/c++/11/ostream:
 
 /usr/include/c++/11/bits/regex_scanner.h:
 
 /usr/include/c++/11/bits/istream.tcc:
 
-/usr/include/c++/11/bits/regex_compiler.tcc:
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
-/usr/include/c++/11/bits/stl_relops.h:
+/usr/include/x86_64-linux-gnu/asm/byteorder.h:
 
-/usr/include/limits.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/usr/include/linux/types.h:
+
+/usr/include/c++/11/bits/ranges_algobase.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/c++/11/bits/exception_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/c++/11/coroutine:
+
+/usr/include/c++/11/vector:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+../lib/libnpl/wrap-read.hpp:
 
 /usr/include/c++/11/regex:
 
@@ -1414,21 +1468,3 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: ../src/tcp_clt.cpp \
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/11/cfloat:
-
-/usr/include/c++/11/bits/sstream.tcc:
-
-/usr/include/c++/11/new:
-
-/usr/include/c++/11/climits:
-
-/usr/include/c++/11/string:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/c++/11/cstring:
-
-/usr/include/x86_64-linux-gnu/asm/sockios.h:
-
-/usr/include/math.h:

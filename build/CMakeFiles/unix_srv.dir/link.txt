@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/unix_srv.dir/src/unix_srv.cpp.o -o unix_srv 

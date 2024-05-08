@@ -48,5 +48,30 @@
   "directory": "/home/dersa/npl/build",
   "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/broadcast_udp.dir/src/broadcast_udp.cpp.o -c /home/dersa/npl/src/broadcast_udp.cpp",
   "file": "/home/dersa/npl/src/broadcast_udp.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/broadcast_usr.dir/src/broadcast_usr.cpp.o -c /home/dersa/npl/src/broadcast_usr.cpp",
+  "file": "/home/dersa/npl/src/broadcast_usr.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/unix_srv.dir/src/unix_srv.cpp.o -c /home/dersa/npl/src/unix_srv.cpp",
+  "file": "/home/dersa/npl/src/unix_srv.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/unix_clt.dir/src/unix_clt.cpp.o -c /home/dersa/npl/src/unix_clt.cpp",
+  "file": "/home/dersa/npl/src/unix_clt.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/l3_sniff.dir/src/l3_sniff.cpp.o -c /home/dersa/npl/src/l3_sniff.cpp",
+  "file": "/home/dersa/npl/src/l3_sniff.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -g -std=gnu++20 -o CMakeFiles/l2_mt_sniff.dir/src/l2_mt_sniff.cpp.o -c /home/dersa/npl/src/l2_mt_sniff.cpp",
+  "file": "/home/dersa/npl/src/l2_mt_sniff.cpp"
 }
 ]

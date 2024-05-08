@@ -214,6 +214,7 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
   /usr/include/x86_64-linux-gnu/asm/sockios.h \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+  /usr/include/net/if.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
   /usr/include/arpa/inet.h \
@@ -222,8 +223,21 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
   /usr/include/x86_64-linux-gnu/bits/netdb.h \
+  /usr/include/x86_64-linux-gnu/sys/un.h \
   /usr/include/c++/11/utility \
   /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/linux/if_packet.h \
+  /usr/include/x86_64-linux-gnu/asm/byteorder.h \
+  /usr/include/linux/byteorder/little_endian.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/linux/swab.h \
+  /usr/include/x86_64-linux-gnu/asm/swab.h \
+  /usr/include/linux/if_ether.h \
   ../lib/libnpl/socket.hpp \
   /usr/include/c++/11/cstddef \
   /usr/include/unistd.h \
@@ -255,6 +269,12 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/linux/types.h:
+
+/usr/include/x86_64-linux-gnu/asm/byteorder.h:
+
+/usr/include/c++/11/sstream:
 
 /usr/include/c++/11/bits/stl_relops.h:
 
@@ -300,11 +320,17 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
+/usr/include/linux/byteorder/little_endian.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
 /usr/include/c++/11/cwctype:
+
+/usr/include/x86_64-linux-gnu/asm/swab.h:
 
 /usr/include/rpc/netdb.h:
 
@@ -370,6 +396,8 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 
 /usr/include/c++/11/bits/algorithmfwd.h:
 
+/usr/include/linux/if_packet.h:
+
 /usr/include/c++/11/bits/std_abs.h:
 
 /usr/include/alloca.h:
@@ -389,6 +417,10 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 /usr/include/x86_64-linux-gnu/asm/socket.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/linux/if_ether.h:
+
+/usr/include/asm-generic/int-ll64.h:
 
 /usr/include/c++/11/bits/ostream.tcc:
 
@@ -494,6 +526,8 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
+/usr/include/asm-generic/types.h:
+
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -586,6 +620,8 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
+/usr/include/net/if.h:
+
 /usr/include/c++/11/bits/ranges_cmp.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
@@ -631,6 +667,8 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/linux/swab.h:
 
 /usr/include/c++/11/bits/localefwd.h:
 
@@ -692,6 +730,8 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 
 /usr/include/c++/11/cstdlib:
 
+/usr/include/c++/11/bits/sstream.tcc:
+
 /usr/include/strings.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
@@ -711,6 +751,8 @@ CMakeFiles/tcp_srv_fork.dir/src/tcp_srv_fork.cpp.o: ../src/tcp_srv_fork.cpp \
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/include/x86_64-linux-gnu/sys/un.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 

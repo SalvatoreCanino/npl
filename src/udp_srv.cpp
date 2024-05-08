@@ -13,8 +13,8 @@ int main(){
     npl::socket<AF_INET, SOCK_DGRAM> sock;
 
     // Fare la bind
-    //npl::sockaddress<AF_INET> srv_addr(15000);
-    npl::sockaddress<AF_INET> srv_addr("172.29.231.198",15000);
+    npl::sockaddress<AF_INET> srv_addr(15000);
+    //npl::sockaddress<AF_INET> srv_addr("172.29.231.198",15000);
     sock.bind(srv_addr);
 
     for(;;)

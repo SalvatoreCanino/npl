@@ -1,10 +1,11 @@
 #ifndef _SOCKET_HPP_
 #define _SOCKET_HPP_
-#include <asm-generic/socket.h>
+#include <cerrno>
 #include <cstddef>
 #include <cstdint>
 #include <system_error>
 #include <unistd.h>
+#include <utility>
 #include <vector>
 #include <sys/socket.h>
 #include "sockaddress.hpp"
@@ -66,63 +67,86 @@ public:
 
     void bind(const sockaddress<F>& addr)
     {
-        if( (::bind(_sockfd, &addr.c_addr(), addr.len())) == -1)
-        {
-            throw std::system_error(errno, std::system_category(), "bind");
+        if constexpr (F == AF_UNIX) {
+            unlink(addr.name().c_str());
+        }
+        if ((::bind(_sockfd, &addr.c_addr(), addr.len()) ) ==-1) {
+            throw std::system_error(errno,std::system_category(),"bind");
         }
     }
 
 
     void listen(int backlog = 5)
     {
-        if( (::listen(_sockfd, backlog)) == -1)
-        {
-            throw std::system_error(errno, std::system_category(), "listen");
+        if (::listen(_sockfd, backlog ) == -1) {
+            throw std::system_error(errno,std::system_category(),"listen");
         }
     }
-
+        
     std::pair< socket, sockaddress<F> > accept()
     {
         sockaddress<F> peer;
-        socket acpt;
-
-        if( (acpt._sockfd = ::accept(_sockfd, &peer.c_addr(), &peer.len())) == -1)
-        {
-            throw std::system_error(errno, std::system_category(), "accept");
+        socket accepted;
+        if ( (accepted._sockfd = ::accept(_sockfd, &peer.c_addr(), &peer.len())) == -1 ) {
+            throw std::system_error(errno,std::system_category(),"accept");
         }
-
-        return std::make_pair(std::move(acpt), peer);
+        return std::make_pair(std::move(accepted), peer);
     }
-
+        
     void connect(const sockaddress<F>& remote)
     {
-        if( (::connect(_sockfd, &remote.c_addr(), remote.len())) == -1)
-        {
-            throw std::system_error(errno, std::system_category(), "connect");
+        if ((::connect(_sockfd, &remote.c_addr(), remote.len()) ) ==-1) {
+            throw std::system_error(errno,std::system_category(),"connect");
         }
     }
 
-    ///////////////////////////////// I/O Methods ////////////////////////////////
+    // I/O methods
 
-    // socket connessi
-
-    std::ptrdiff_t write(const buffer& buff) const
+    std::ptrdiff_t write(const buffer& buf) const
     {
-        return ::write(_sockfd, &buff[0], buff.size());
+        return ::write(_sockfd, &buf[0], buf.size());
     }
 
-    // Versione alla C
-    std::ptrdiff_t read(buffer& buff) const
+    std::ptrdiff_t writen(const buffer& buf, ssize_t n)
     {
-        return ::read(_sockfd, &buff[0], buff.size());
+        std::ptrdiff_t num_written;
+        std::ptrdiff_t tot_written = 0;
+
+        while (tot_written < n ) {
+            num_written = ::write(_sockfd, &buf[tot_written], n-tot_written); 
+
+            if (num_written <= 0)  // An error has happened
+            {
+                if (num_written == -1 && errno == EINTR) 
+                    continue;     // Restart writing bythes form scratch in case of interrupt
+                else 
+                    return -1;  
+            }  
+            tot_written += num_written;
+        }
+        return tot_written;
     }
 
-    // Versione alla Python
-    buffer read(size_t len)
+    std::ptrdiff_t      send(const buffer& buf, int flags = 0) const
     {
-        buffer buff(len);
-        int nbytes = ::read(_sockfd, &buff[0], buff.size());
-        return buffer(buff.begin(), buff.begin()+nbytes);
+       return ::send(_sockfd, &buf[0], buf.size(), flags);
+    }
+
+    std::ptrdiff_t 
+    sendto(const buffer& buf, const sockaddress<F>& remote, int flags = 0) const 
+    {
+        return ::sendto(_sockfd, &buf[0], buf.size(), flags, &remote.c_addr(), remote.len());
+    }
+
+    std::ptrdiff_t read(buffer& buf) const
+    {
+        return ::read(_sockfd, &buf[0], buf.size());
+    }
+    buffer read(size_t n) const 
+    {
+        buffer buf(n);
+        int nbytes = ::read(_sockfd, &buf[0], buf.size());
+        return buffer(buf.begin(),buf.begin()+nbytes);
     }
 
     std::ptrdiff_t readn(buffer& buf, ssize_t n ) const
@@ -150,37 +174,89 @@ public:
         return tot_read;
     }
 
-    buffer readn(ssize_t len ) const
+    buffer     readn(ssize_t len ) const
     {
         buffer buf(len);
         auto tot_read = this->readn(buf,len);
         return buffer(buf.begin(),buf.begin()+tot_read);
     }
 
-    // socket connectionless
 
-    std::ptrdiff_t sendto(const buffer& buff, const sockaddress<F>& remote, int flags = 0) const
+    std::ptrdiff_t      recv(buffer& buf, int flags = 0) const
     {
-        return  ::sendto(_sockfd, &buff[0], buff.size(), flags, &remote.c_addr(), remote.len());
+        return ::recv(_sockfd, &buf[0], buf.size(), flags);
     }
 
-    // Versione alla C
-    std::ptrdiff_t recvfrom(buffer& buff, int flags, sockaddress<F>& remote) const
+    buffer              recv(int len, int flags = 0) const
     {
-        return recvfrom(_sockfd, &buff[0], buff.size(), flags, &remote.c_addr(), &remote.len());
+        buffer buf(len);
+        std::ptrdiff_t n = ::recv(_sockfd, &buf[0], buf.size(), flags);
+        return buffer(buf.begin(),buf.begin()+n);
     }
 
-    // Versione alla Python
-    std::pair< buffer, sockaddress<F> > recvfrom(int len, int flags = 0) const
+    std::ptrdiff_t      recvn(buffer& buf, int flags = 0) const
     {
-        buffer buff(len);
-        sockaddress<F> peer;
-        int nbytes = ::recvfrom(_sockfd, &buff[0], len, flags, &peer.c_addr(), &peer.len());
-        return std::make_pair(buffer(buff.begin(), buff.begin() + nbytes), peer);
-
+        return ::recv(_sockfd, &buf[0], buf.size(), flags | MSG_WAITALL);
     }
 
-     // Socket Options
+    
+    buffer              recvn(int len, int flags = 0) const
+    {
+        buffer buf(len);
+        std::ptrdiff_t n = ::recv(_sockfd, &buf[0], buf.size(), flags | MSG_WAITALL);
+        return buffer(buf.begin(),buf.begin()+n);
+    }
+
+
+
+
+
+    std::ptrdiff_t
+    recvfrom(buffer& buf, sockaddress<F>& remote, int flags = 0) const
+    {
+        return ::recvfrom(_sockfd, &buf[0], buf.size(), flags, &remote.c_addr(), &remote.len());
+    }
+
+    std::pair<buffer, sockaddress<F>>
+    recvfrom(size_t n, int flags = 0) const
+    {
+        buffer buf(n);
+        sockaddress<F> remote;
+        int nbytes = ::recvfrom(_sockfd, &buf[0], buf.size(), flags, &remote.c_addr(), &remote.len());
+        return std::make_pair(buffer(buf.begin(),buf.begin()+nbytes),remote);
+    }
+
+    // Socket Options
+
+    int
+    setsockopt(int level, int optname, const void *optval, socklen_t optlen)
+    {
+        int out = ::setsockopt(_sockfd, level, optname, optval, optlen);
+        if (out == -1) {
+            throw std::system_error(errno,std::generic_category(),"setsockopt");
+        }
+        return out;
+    }
+
+    int
+    getsockopt(int level, int optname, void *optval, socklen_t *optlen) const
+    {
+        int out = ::getsockopt(_sockfd, level, optname, optval, optlen);
+        if (out == -1) {
+            throw std::system_error(errno,std::generic_category(),"getsockopt");
+        }
+        return out;
+    }
+
+    int set_reuseaddr() 
+    {
+       int optval = 1;
+       int out = ::setsockopt(_sockfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
+       if (out == -1) {
+          throw std::system_error(errno,std::generic_category(),"set_reuseaddr");
+       }
+       return out;
+    }
 
     int broadcast_enable() 
     {
@@ -190,20 +266,55 @@ public:
           throw std::system_error(errno,std::generic_category(),"broadcast_enable");
        }
        return out;
-    }  
+    }       
 
-    int set_reuseaddr() 
-    {
-       int optval = 1;
-       int out = ::setsockopt(_sockfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
-       if (out == -1) {
-          throw std::system_error(errno,std::generic_category(),"broadcast_enable");
-       }
-       return out;
-    }  
-    
+    #ifdef __linux__
+        // Put interface in promisc mode
+        
+        int set_promisc(int ifindex) 
+        {
+            struct packet_mreq mreq = {0};
+            mreq.mr_ifindex = ifindex;
+            mreq.mr_type = PACKET_MR_PROMISC;
+            int out = ::setsockopt(_sockfd, SOL_PACKET, PACKET_ADD_MEMBERSHIP, &mreq, sizeof(mreq));
+            if (out == -1) {
+                throw std::system_error(errno,std::generic_category(),"set_promisc");
+            }
+            return out;
+        }
+
+        int set_promisc(std::string device)
+        {
+            int if_index = if_nametoindex(device.c_str());
+            if ( if_index == 0 )
+            {
+                throw std::system_error(errno, std::system_category(), "Interface not available");
+            }  
+            return this->set_promisc(if_index);
+        }
+
+
+        // Enable fanout mode (join fanout group)
+        int set_fanout(int group, int mode = PACKET_FANOUT_HASH)
+        {
+            int arg = ( (mode << 16) | group);
+            int out = ::setsockopt(_sockfd, SOL_PACKET, PACKET_FANOUT, &arg, sizeof(arg));
+            if (out == -1) {
+                throw std::system_error(errno,std::generic_category(),"set_fanout");
+            }
+            return out;
+        }
+    #endif
+
+
 
 };
+
+
+
+
+
 }
+
 
 #endif

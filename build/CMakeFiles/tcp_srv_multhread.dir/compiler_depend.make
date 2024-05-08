@@ -214,6 +214,7 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
   /usr/include/x86_64-linux-gnu/asm/sockios.h \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+  /usr/include/net/if.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
   /usr/include/arpa/inet.h \
@@ -222,8 +223,21 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
   /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
   /usr/include/x86_64-linux-gnu/bits/netdb.h \
+  /usr/include/x86_64-linux-gnu/sys/un.h \
   /usr/include/c++/11/utility \
   /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/linux/if_packet.h \
+  /usr/include/x86_64-linux-gnu/asm/byteorder.h \
+  /usr/include/linux/byteorder/little_endian.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/linux/swab.h \
+  /usr/include/x86_64-linux-gnu/asm/swab.h \
+  /usr/include/linux/if_ether.h \
   ../lib/libnpl/socket.hpp \
   /usr/include/c++/11/cstddef \
   /usr/include/unistd.h \
@@ -281,7 +295,7 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
   /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  ../lib/libnpl/header.hpp \
+  ../lib/libnpl/wrap-read.hpp \
   ../lib/libnpl/socket.hpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
   /usr/include/c++/11/cassert \
@@ -339,8 +353,6 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
   /usr/include/c++/11/cstdarg \
   /usr/include/c++/11/ccomplex \
   /usr/include/c++/11/complex \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/cfenv \
   /usr/include/c++/11/fenv.h \
   /usr/include/fenv.h \
@@ -645,8 +657,6 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
@@ -717,8 +727,6 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/c++/11/cassert:
 
-../lib/libnpl/header.hpp:
-
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
@@ -753,9 +761,27 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
 
-/usr/include/c++/11/sstream:
+/usr/include/x86_64-linux-gnu/sys/syscall.h:
 
-/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/syscall.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/c++/11/bits/valarray_before.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+/usr/include/c++/11/bits/atomic_wait.h:
 
 /usr/include/c++/11/bits/node_handle.h:
 
@@ -763,7 +789,7 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/c++/11/iostream:
 
-/usr/include/x86_64-linux-gnu/sys/syscall.h:
+/usr/include/x86_64-linux-gnu/sys/un.h:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
@@ -817,6 +843,12 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/c++/11/bits/shared_ptr_base.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/c++/11/bits/basic_string.h:
+
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
@@ -833,13 +865,19 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/c++/11/bits/localefwd.h:
 
+/usr/include/linux/swab.h:
+
+/usr/include/c++/11/iomanip:
+
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
+
+/usr/include/c++/11/cctype:
+
 /usr/include/c++/11/cfloat:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
@@ -850,8 +888,6 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/c++/11/bits/predefined_ops.h:
-
-/usr/include/c++/11/bits/atomic_wait.h:
 
 /usr/include/c++/11/bits/shared_ptr.h:
 
@@ -864,6 +900,12 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/11/bits/stl_iterator.h:
+
+/usr/include/c++/11/climits:
+
+/usr/include/c++/11/bits/sstream.tcc:
+
+/usr/include/c++/11/new:
 
 /usr/include/linux/close_range.h:
 
@@ -879,6 +921,8 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/c++/11/bits/ranges_cmp.h:
 
+/usr/include/net/if.h:
+
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
@@ -886,6 +930,10 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 /usr/include/wchar.h:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/c++/11/string:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
@@ -910,6 +958,12 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 /usr/include/c++/11/functional:
 
 /usr/include/linux/errno.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/usr/include/c++/11/debug/debug.h:
+
+/usr/include/features-time64.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
 
@@ -989,6 +1043,8 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
+../lib/libnpl/wrap-read.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
@@ -1055,18 +1111,6 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/include/c++/11/bits/shared_ptr_base.h:
-
-/usr/include/c++/11/bits/basic_string.h:
-
-/usr/include/linux/limits.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
 /usr/include/c++/11/cstdbool:
 
 /usr/include/c++/11/bits/exception_ptr.h:
@@ -1107,8 +1151,6 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
 /usr/include/c++/11/ext/numeric_traits.h:
 
 /usr/include/c++/11/syncstream:
@@ -1124,6 +1166,12 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 /usr/include/c++/11/clocale:
 
 /usr/include/c++/11/bits/ostream.tcc:
+
+/usr/include/c++/11/bits/stl_algo.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/linux/if_ether.h:
 
 /usr/include/stdlib.h:
 
@@ -1203,12 +1251,6 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/c++/11/string_view:
 
-/usr/include/c++/11/iomanip:
-
-/usr/include/c++/11/cctype:
-
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
-
 /usr/include/c++/11/bits/functional_hash.h:
 
 /usr/include/c++/11/bits/align.h:
@@ -1249,11 +1291,9 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/asm-generic/errno.h:
 
-/usr/include/c++/11/bits/stl_tree.h:
-
-/usr/include/syscall.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/linux/if_packet.h:
 
 /usr/include/c++/11/bits/charconv.h:
 
@@ -1291,13 +1331,17 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/rpc/netdb.h:
 
+/usr/include/x86_64-linux-gnu/asm/swab.h:
+
 /usr/include/semaphore.h:
 
 /usr/include/c++/11/cwctype:
 
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+/usr/include/linux/byteorder/little_endian.h:
 
 /usr/include/c++/11/bits/this_thread_sleep.h:
 
@@ -1349,13 +1393,13 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
+/usr/include/asm-generic/types.h:
+
 /usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/asm-generic/bitsperlong.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/math.h:
 
@@ -1387,11 +1431,17 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 
 /usr/include/c++/11/bits/stl_relops.h:
 
-/usr/include/c++/11/debug/debug.h:
+/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
 
-/usr/include/features-time64.h:
+/usr/include/c++/11/sstream:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
+/usr/include/x86_64-linux-gnu/asm/byteorder.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/usr/include/linux/types.h:
 
 /usr/include/c++/11/bits/ranges_algobase.h:
 
@@ -1418,17 +1468,3 @@ CMakeFiles/tcp_srv_multhread.dir/src/tcp_srv_multhread.cpp.o: ../src/tcp_srv_mul
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
-
-/usr/include/c++/11/bits/sstream.tcc:
-
-/usr/include/c++/11/new:
-
-/usr/include/c++/11/climits:
-
-/usr/include/c++/11/bits/valarray_before.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
-
-/usr/include/c++/11/string:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:

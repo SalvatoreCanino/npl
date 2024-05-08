@@ -277,6 +277,71 @@ broadcast_udp/fast:
 .PHONY : broadcast_udp/fast
 
 #=============================================================================
+# Target rules for targets named broadcast_usr
+
+# Build rule for target.
+broadcast_usr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 broadcast_usr
+.PHONY : broadcast_usr
+
+# fast build rule for target.
+broadcast_usr/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/broadcast_usr.dir/build.make CMakeFiles/broadcast_usr.dir/build
+.PHONY : broadcast_usr/fast
+
+#=============================================================================
+# Target rules for targets named unix_srv
+
+# Build rule for target.
+unix_srv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unix_srv
+.PHONY : unix_srv
+
+# fast build rule for target.
+unix_srv/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_srv.dir/build.make CMakeFiles/unix_srv.dir/build
+.PHONY : unix_srv/fast
+
+#=============================================================================
+# Target rules for targets named unix_clt
+
+# Build rule for target.
+unix_clt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unix_clt
+.PHONY : unix_clt
+
+# fast build rule for target.
+unix_clt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_clt.dir/build.make CMakeFiles/unix_clt.dir/build
+.PHONY : unix_clt/fast
+
+#=============================================================================
+# Target rules for targets named l3_sniff
+
+# Build rule for target.
+l3_sniff: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 l3_sniff
+.PHONY : l3_sniff
+
+# fast build rule for target.
+l3_sniff/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l3_sniff.dir/build.make CMakeFiles/l3_sniff.dir/build
+.PHONY : l3_sniff/fast
+
+#=============================================================================
+# Target rules for targets named l2_mt_sniff
+
+# Build rule for target.
+l2_mt_sniff: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 l2_mt_sniff
+.PHONY : l2_mt_sniff
+
+# fast build rule for target.
+l2_mt_sniff/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_mt_sniff.dir/build.make CMakeFiles/l2_mt_sniff.dir/build
+.PHONY : l2_mt_sniff/fast
+
+#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -664,6 +729,30 @@ src/broadcast_udp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/broadcast_udp.dir/build.make CMakeFiles/broadcast_udp.dir/src/broadcast_udp.cpp.s
 .PHONY : src/broadcast_udp.cpp.s
 
+src/broadcast_usr.o: src/broadcast_usr.cpp.o
+.PHONY : src/broadcast_usr.o
+
+# target to build an object file
+src/broadcast_usr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/broadcast_usr.dir/build.make CMakeFiles/broadcast_usr.dir/src/broadcast_usr.cpp.o
+.PHONY : src/broadcast_usr.cpp.o
+
+src/broadcast_usr.i: src/broadcast_usr.cpp.i
+.PHONY : src/broadcast_usr.i
+
+# target to preprocess a source file
+src/broadcast_usr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/broadcast_usr.dir/build.make CMakeFiles/broadcast_usr.dir/src/broadcast_usr.cpp.i
+.PHONY : src/broadcast_usr.cpp.i
+
+src/broadcast_usr.s: src/broadcast_usr.cpp.s
+.PHONY : src/broadcast_usr.s
+
+# target to generate assembly for a file
+src/broadcast_usr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/broadcast_usr.dir/build.make CMakeFiles/broadcast_usr.dir/src/broadcast_usr.cpp.s
+.PHONY : src/broadcast_usr.cpp.s
+
 src/conc.o: src/conc.cpp.o
 .PHONY : src/conc.o
 
@@ -711,6 +800,54 @@ src/endianless.s: src/endianless.cpp.s
 src/endianless.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/endianless.dir/build.make CMakeFiles/endianless.dir/src/endianless.cpp.s
 .PHONY : src/endianless.cpp.s
+
+src/l2_mt_sniff.o: src/l2_mt_sniff.cpp.o
+.PHONY : src/l2_mt_sniff.o
+
+# target to build an object file
+src/l2_mt_sniff.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_mt_sniff.dir/build.make CMakeFiles/l2_mt_sniff.dir/src/l2_mt_sniff.cpp.o
+.PHONY : src/l2_mt_sniff.cpp.o
+
+src/l2_mt_sniff.i: src/l2_mt_sniff.cpp.i
+.PHONY : src/l2_mt_sniff.i
+
+# target to preprocess a source file
+src/l2_mt_sniff.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_mt_sniff.dir/build.make CMakeFiles/l2_mt_sniff.dir/src/l2_mt_sniff.cpp.i
+.PHONY : src/l2_mt_sniff.cpp.i
+
+src/l2_mt_sniff.s: src/l2_mt_sniff.cpp.s
+.PHONY : src/l2_mt_sniff.s
+
+# target to generate assembly for a file
+src/l2_mt_sniff.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_mt_sniff.dir/build.make CMakeFiles/l2_mt_sniff.dir/src/l2_mt_sniff.cpp.s
+.PHONY : src/l2_mt_sniff.cpp.s
+
+src/l3_sniff.o: src/l3_sniff.cpp.o
+.PHONY : src/l3_sniff.o
+
+# target to build an object file
+src/l3_sniff.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l3_sniff.dir/build.make CMakeFiles/l3_sniff.dir/src/l3_sniff.cpp.o
+.PHONY : src/l3_sniff.cpp.o
+
+src/l3_sniff.i: src/l3_sniff.cpp.i
+.PHONY : src/l3_sniff.i
+
+# target to preprocess a source file
+src/l3_sniff.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l3_sniff.dir/build.make CMakeFiles/l3_sniff.dir/src/l3_sniff.cpp.i
+.PHONY : src/l3_sniff.cpp.i
+
+src/l3_sniff.s: src/l3_sniff.cpp.s
+.PHONY : src/l3_sniff.s
+
+# target to generate assembly for a file
+src/l3_sniff.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l3_sniff.dir/build.make CMakeFiles/l3_sniff.dir/src/l3_sniff.cpp.s
+.PHONY : src/l3_sniff.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -880,6 +1017,54 @@ src/udp_srv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/src/udp_srv.cpp.s
 .PHONY : src/udp_srv.cpp.s
 
+src/unix_clt.o: src/unix_clt.cpp.o
+.PHONY : src/unix_clt.o
+
+# target to build an object file
+src/unix_clt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_clt.dir/build.make CMakeFiles/unix_clt.dir/src/unix_clt.cpp.o
+.PHONY : src/unix_clt.cpp.o
+
+src/unix_clt.i: src/unix_clt.cpp.i
+.PHONY : src/unix_clt.i
+
+# target to preprocess a source file
+src/unix_clt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_clt.dir/build.make CMakeFiles/unix_clt.dir/src/unix_clt.cpp.i
+.PHONY : src/unix_clt.cpp.i
+
+src/unix_clt.s: src/unix_clt.cpp.s
+.PHONY : src/unix_clt.s
+
+# target to generate assembly for a file
+src/unix_clt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_clt.dir/build.make CMakeFiles/unix_clt.dir/src/unix_clt.cpp.s
+.PHONY : src/unix_clt.cpp.s
+
+src/unix_srv.o: src/unix_srv.cpp.o
+.PHONY : src/unix_srv.o
+
+# target to build an object file
+src/unix_srv.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_srv.dir/build.make CMakeFiles/unix_srv.dir/src/unix_srv.cpp.o
+.PHONY : src/unix_srv.cpp.o
+
+src/unix_srv.i: src/unix_srv.cpp.i
+.PHONY : src/unix_srv.i
+
+# target to preprocess a source file
+src/unix_srv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_srv.dir/build.make CMakeFiles/unix_srv.dir/src/unix_srv.cpp.i
+.PHONY : src/unix_srv.cpp.i
+
+src/unix_srv.s: src/unix_srv.cpp.s
+.PHONY : src/unix_srv.s
+
+# target to generate assembly for a file
+src/unix_srv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_srv.dir/build.make CMakeFiles/unix_srv.dir/src/unix_srv.cpp.s
+.PHONY : src/unix_srv.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -920,8 +1105,11 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... broadcast_udp"
+	@echo "... broadcast_usr"
 	@echo "... conc"
 	@echo "... endianless"
+	@echo "... l2_mt_sniff"
+	@echo "... l3_sniff"
 	@echo "... main"
 	@echo "... tcp_clt"
 	@echo "... tcp_srv_fork"
@@ -929,15 +1117,26 @@ help:
 	@echo "... tcp_srv_naive"
 	@echo "... udp_clt"
 	@echo "... udp_srv"
+	@echo "... unix_clt"
+	@echo "... unix_srv"
 	@echo "... src/broadcast_udp.o"
 	@echo "... src/broadcast_udp.i"
 	@echo "... src/broadcast_udp.s"
+	@echo "... src/broadcast_usr.o"
+	@echo "... src/broadcast_usr.i"
+	@echo "... src/broadcast_usr.s"
 	@echo "... src/conc.o"
 	@echo "... src/conc.i"
 	@echo "... src/conc.s"
 	@echo "... src/endianless.o"
 	@echo "... src/endianless.i"
 	@echo "... src/endianless.s"
+	@echo "... src/l2_mt_sniff.o"
+	@echo "... src/l2_mt_sniff.i"
+	@echo "... src/l2_mt_sniff.s"
+	@echo "... src/l3_sniff.o"
+	@echo "... src/l3_sniff.i"
+	@echo "... src/l3_sniff.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -959,6 +1158,12 @@ help:
 	@echo "... src/udp_srv.o"
 	@echo "... src/udp_srv.i"
 	@echo "... src/udp_srv.s"
+	@echo "... src/unix_clt.o"
+	@echo "... src/unix_clt.i"
+	@echo "... src/unix_clt.s"
+	@echo "... src/unix_srv.o"
+	@echo "... src/unix_srv.i"
+	@echo "... src/unix_srv.s"
 .PHONY : help
 
 

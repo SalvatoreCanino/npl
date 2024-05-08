@@ -19,6 +19,12 @@ add_executable(tcp_srv_fork src/tcp_srv_fork.cpp)
 add_executable(tcp_srv_multhread src/tcp_srv_multhread.cpp)
 add_executable(tcp_clt src/tcp_clt.cpp)
 add_executable(broadcast_udp src/broadcast_udp.cpp)
+add_executable(broadcast_usr src/broadcast_usr.cpp)
+add_executable(unix_srv src/unix_srv.cpp)
+add_executable(unix_clt src/unix_clt.cpp)
+add_executable(l3_sniff src/l3_sniff.cpp)
+add_executable(l2_mt_sniff src/l2_mt_sniff.cpp)
+
 
 include(CTest)
 enable_testing()

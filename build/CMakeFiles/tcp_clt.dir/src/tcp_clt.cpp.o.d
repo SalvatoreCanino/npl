@@ -155,20 +155,43 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: /home/dersa/npl/src/tcp_clt.cpp \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h \
- /usr/include/arpa/inet.h /usr/include/netdb.h /usr/include/rpc/netdb.h \
+ /usr/include/net/if.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/arpa/inet.h \
+ /usr/include/netdb.h /usr/include/rpc/netdb.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
  /usr/include/x86_64-linux-gnu/bits/netdb.h \
- /usr/include/c++/11/system_error \
+ /usr/include/x86_64-linux-gnu/sys/un.h /usr/include/c++/11/system_error \
  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
  /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
  /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
  /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /home/dersa/npl/lib/libnpl/socket.hpp /usr/include/c++/11/cstddef \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/c++/11/sstream /usr/include/c++/11/istream \
+ /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/locale_classes.h \
+ /usr/include/c++/11/bits/locale_classes.tcc \
+ /usr/include/c++/11/streambuf /usr/include/c++/11/bits/streambuf.tcc \
+ /usr/include/c++/11/bits/basic_ios.h \
+ /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+ /usr/include/c++/11/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+ /usr/include/c++/11/bits/locale_facets.tcc \
+ /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
+ /usr/include/c++/11/bits/ostream.tcc \
+ /usr/include/c++/11/bits/istream.tcc \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/linux/if_packet.h \
+ /usr/include/x86_64-linux-gnu/asm/byteorder.h \
+ /usr/include/linux/byteorder/little_endian.h /usr/include/linux/types.h \
+ /usr/include/x86_64-linux-gnu/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/linux/swab.h /usr/include/x86_64-linux-gnu/asm/swab.h \
+ /usr/include/linux/if_ether.h /home/dersa/npl/lib/libnpl/socket.hpp \
+ /usr/include/c++/11/cstddef /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
@@ -180,23 +203,8 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: /home/dersa/npl/src/tcp_clt.cpp \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /home/dersa/npl/lib/libnpl/sockaddress.hpp \
- /home/dersa/npl/lib/libnpl/header.hpp \
+ /home/dersa/npl/lib/libnpl/wrap-read.hpp \
  /home/dersa/npl/lib/libnpl/socket.hpp /usr/include/c++/11/iostream \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/bits/ios_base.h \
- /usr/include/c++/11/bits/locale_classes.h \
- /usr/include/c++/11/bits/locale_classes.tcc \
- /usr/include/c++/11/streambuf /usr/include/c++/11/bits/streambuf.tcc \
- /usr/include/c++/11/bits/basic_ios.h \
- /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
- /usr/include/c++/11/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
- /usr/include/c++/11/bits/locale_facets.tcc \
- /usr/include/c++/11/bits/basic_ios.tcc \
- /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
  /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
  /usr/include/c++/11/cassert /usr/include/assert.h \
  /usr/include/c++/11/cfloat \
@@ -254,7 +262,6 @@ CMakeFiles/tcp_clt.dir/src/tcp_clt.cpp.o: /home/dersa/npl/src/tcp_clt.cpp \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /usr/include/c++/11/cstdarg /usr/include/c++/11/ctime \
  /usr/include/c++/11/ccomplex /usr/include/c++/11/complex \
- /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
  /usr/include/c++/11/cfenv /usr/include/c++/11/fenv.h /usr/include/fenv.h \
  /usr/include/x86_64-linux-gnu/bits/fenv.h /usr/include/c++/11/cinttypes \
  /usr/include/inttypes.h /usr/include/c++/11/cstdalign \
