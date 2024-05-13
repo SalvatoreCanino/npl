@@ -127,13 +127,12 @@ public:
         return tot_written;
     }
 
-    std::ptrdiff_t      send(const buffer& buf, int flags = 0) const
+    std::ptrdiff_t send(const buffer& buf, int flags = 0) const
     {
        return ::send(_sockfd, &buf[0], buf.size(), flags);
     }
 
-    std::ptrdiff_t 
-    sendto(const buffer& buf, const sockaddress<F>& remote, int flags = 0) const 
+    std::ptrdiff_t sendto(const buffer& buf, const sockaddress<F>& remote, int flags = 0) const 
     {
         return ::sendto(_sockfd, &buf[0], buf.size(), flags, &remote.c_addr(), remote.len());
     }
@@ -142,6 +141,7 @@ public:
     {
         return ::read(_sockfd, &buf[0], buf.size());
     }
+
     buffer read(size_t n) const 
     {
         buffer buf(n);
@@ -174,51 +174,43 @@ public:
         return tot_read;
     }
 
-    buffer     readn(ssize_t len ) const
+    buffer readn(ssize_t len ) const
     {
         buffer buf(len);
         auto tot_read = this->readn(buf,len);
         return buffer(buf.begin(),buf.begin()+tot_read);
     }
 
-
-    std::ptrdiff_t      recv(buffer& buf, int flags = 0) const
+    std::ptrdiff_t recv(buffer& buf, int flags = 0) const
     {
         return ::recv(_sockfd, &buf[0], buf.size(), flags);
     }
 
-    buffer              recv(int len, int flags = 0) const
+    buffer recv(int len, int flags = 0) const
     {
         buffer buf(len);
         std::ptrdiff_t n = ::recv(_sockfd, &buf[0], buf.size(), flags);
         return buffer(buf.begin(),buf.begin()+n);
     }
 
-    std::ptrdiff_t      recvn(buffer& buf, int flags = 0) const
+    std::ptrdiff_t recvn(buffer& buf, int flags = 0) const
     {
         return ::recv(_sockfd, &buf[0], buf.size(), flags | MSG_WAITALL);
     }
 
-    
-    buffer              recvn(int len, int flags = 0) const
+    buffer recvn(int len, int flags = 0) const
     {
         buffer buf(len);
         std::ptrdiff_t n = ::recv(_sockfd, &buf[0], buf.size(), flags | MSG_WAITALL);
         return buffer(buf.begin(),buf.begin()+n);
     }
 
-
-
-
-
-    std::ptrdiff_t
-    recvfrom(buffer& buf, sockaddress<F>& remote, int flags = 0) const
+    std::ptrdiff_t recvfrom(buffer& buf, sockaddress<F>& remote, int flags = 0) const
     {
         return ::recvfrom(_sockfd, &buf[0], buf.size(), flags, &remote.c_addr(), &remote.len());
     }
 
-    std::pair<buffer, sockaddress<F>>
-    recvfrom(size_t n, int flags = 0) const
+    std::pair<buffer, sockaddress<F>> recvfrom(size_t n, int flags = 0) const
     {
         buffer buf(n);
         sockaddress<F> remote;
@@ -228,8 +220,7 @@ public:
 
     // Socket Options
 
-    int
-    setsockopt(int level, int optname, const void *optval, socklen_t optlen)
+    int setsockopt(int level, int optname, const void *optval, socklen_t optlen)
     {
         int out = ::setsockopt(_sockfd, level, optname, optval, optlen);
         if (out == -1) {
@@ -238,8 +229,7 @@ public:
         return out;
     }
 
-    int
-    getsockopt(int level, int optname, void *optval, socklen_t *optlen) const
+    int getsockopt(int level, int optname, void *optval, socklen_t *optlen) const
     {
         int out = ::getsockopt(_sockfd, level, optname, optval, optlen);
         if (out == -1) {
@@ -309,12 +299,6 @@ public:
 
 
 };
-
-
-
-
-
 }
-
 
 #endif

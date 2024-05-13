@@ -78,5 +78,10 @@
   "directory": "/home/dersa/npl/build",
   "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/srv.dir/chatroom/srv.cpp.o -c /home/dersa/npl/chatroom/srv.cpp",
   "file": "/home/dersa/npl/chatroom/srv.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/clt.dir/chatroom/clt.cpp.o -c /home/dersa/npl/chatroom/clt.cpp",
+  "file": "/home/dersa/npl/chatroom/clt.cpp"
 }
 ]

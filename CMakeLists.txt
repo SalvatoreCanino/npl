@@ -27,7 +27,7 @@ add_executable(l3_sniff src/l3_sniff.cpp)
 add_executable(l2_mt_sniff src/l2_mt_sniff.cpp)
 
 add_executable(srv chatroom/srv.cpp)
-
+add_executable(clt chatroom/clt.cpp)
 
 include(CTest)
 enable_testing()

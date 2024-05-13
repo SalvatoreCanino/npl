@@ -355,6 +355,19 @@ srv/fast:
 .PHONY : srv/fast
 
 #=============================================================================
+# Target rules for targets named clt
+
+# Build rule for target.
+clt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clt
+.PHONY : clt
+
+# fast build rule for target.
+clt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clt.dir/build.make CMakeFiles/clt.dir/build
+.PHONY : clt/fast
+
+#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -717,6 +730,30 @@ ContinuousSubmit: cmake_check_build_system
 ContinuousSubmit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
+
+chatroom/clt.o: chatroom/clt.cpp.o
+.PHONY : chatroom/clt.o
+
+# target to build an object file
+chatroom/clt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clt.dir/build.make CMakeFiles/clt.dir/chatroom/clt.cpp.o
+.PHONY : chatroom/clt.cpp.o
+
+chatroom/clt.i: chatroom/clt.cpp.i
+.PHONY : chatroom/clt.i
+
+# target to preprocess a source file
+chatroom/clt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clt.dir/build.make CMakeFiles/clt.dir/chatroom/clt.cpp.i
+.PHONY : chatroom/clt.cpp.i
+
+chatroom/clt.s: chatroom/clt.cpp.s
+.PHONY : chatroom/clt.s
+
+# target to generate assembly for a file
+chatroom/clt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clt.dir/build.make CMakeFiles/clt.dir/chatroom/clt.cpp.s
+.PHONY : chatroom/clt.cpp.s
 
 chatroom/srv.o: chatroom/srv.cpp.o
 .PHONY : chatroom/srv.o
@@ -1143,6 +1180,7 @@ help:
 	@echo "... NightlyUpdate"
 	@echo "... broadcast_udp"
 	@echo "... broadcast_usr"
+	@echo "... clt"
 	@echo "... conc"
 	@echo "... endianless"
 	@echo "... l2_mt_sniff"
@@ -1157,6 +1195,9 @@ help:
 	@echo "... udp_srv"
 	@echo "... unix_clt"
 	@echo "... unix_srv"
+	@echo "... chatroom/clt.o"
+	@echo "... chatroom/clt.i"
+	@echo "... chatroom/clt.s"
 	@echo "... chatroom/srv.o"
 	@echo "... chatroom/srv.i"
 	@echo "... chatroom/srv.s"

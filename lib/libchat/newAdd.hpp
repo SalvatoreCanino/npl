@@ -19,7 +19,6 @@ void to_stringAdd(std::string & s, const New_Broadcast_Server& nbs)
     s = j.dump();
 }
 
-
 void from_jsonAdd(const json& j, New_Broadcast_Server& nbs)
 {
     j.at("name").get_to(nbs.name);
@@ -30,7 +29,7 @@ void from_jsonAdd(const json& j, New_Broadcast_Server& nbs)
 void from_stringAdd(const std::string& s, New_Broadcast_Server& nbs)
 {
     json j = json::parse(s);
-    to_jsonAdd(j, nbs);
+    from_jsonAdd(j, nbs);
 }
 
 #endif

@@ -14,6 +14,7 @@
 /home/dersa/npl/build/CMakeFiles/l3_sniff.dir
 /home/dersa/npl/build/CMakeFiles/l2_mt_sniff.dir
 /home/dersa/npl/build/CMakeFiles/srv.dir
+/home/dersa/npl/build/CMakeFiles/clt.dir
 /home/dersa/npl/build/CMakeFiles/Experimental.dir
 /home/dersa/npl/build/CMakeFiles/Nightly.dir
 /home/dersa/npl/build/CMakeFiles/Continuous.dir
