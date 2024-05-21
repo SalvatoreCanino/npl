@@ -12,7 +12,13 @@
 /home/dersa/npl/build/CMakeFiles/unix_srv.dir
 /home/dersa/npl/build/CMakeFiles/unix_clt.dir
 /home/dersa/npl/build/CMakeFiles/l3_sniff.dir
+/home/dersa/npl/build/CMakeFiles/l2_sniff.dir
 /home/dersa/npl/build/CMakeFiles/l2_mt_sniff.dir
+/home/dersa/npl/build/CMakeFiles/cPcap_sniff.dir
+/home/dersa/npl/build/CMakeFiles/pcap_sniff.dir
+/home/dersa/npl/build/CMakeFiles/pcap_counter.dir
+/home/dersa/npl/build/CMakeFiles/ip_counter.dir
+/home/dersa/npl/build/CMakeFiles/bloom_filter.dir
 /home/dersa/npl/build/CMakeFiles/srv.dir
 /home/dersa/npl/build/CMakeFiles/clt.dir
 /home/dersa/npl/build/CMakeFiles/Experimental.dir

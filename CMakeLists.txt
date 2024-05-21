@@ -24,7 +24,24 @@ add_executable(broadcast_usr src/broadcast_usr.cpp)
 add_executable(unix_srv src/unix_srv.cpp)
 add_executable(unix_clt src/unix_clt.cpp)
 add_executable(l3_sniff src/l3_sniff.cpp)
+add_executable(l2_sniff src/l2_sniff.cpp)
 add_executable(l2_mt_sniff src/l2_mt_sniff.cpp)
+
+add_executable(cPcap_sniff src/cPcap_sniff.cpp)
+target_link_libraries(cPcap_sniff pcap)
+
+add_executable(pcap_sniff src/pcap_sniff.cpp)
+target_link_libraries(pcap_sniff pcap)
+
+add_executable(pcap_counter src/pcap_counter.cpp)
+target_link_libraries(pcap_counter pcap)
+target_link_libraries(pcap_counter -pthread)
+
+add_executable(ip_counter src/ip_counter.cpp)
+target_link_libraries(ip_counter pcap)
+target_link_libraries(ip_counter -pthread)
+
+add_executable(bloom_filter src/bloom_filter.cpp)
 
 add_executable(srv chatroom/srv.cpp)
 add_executable(clt chatroom/clt.cpp)

@@ -71,8 +71,38 @@
 },
 {
   "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/l2_sniff.dir/src/l2_sniff.cpp.o -c /home/dersa/npl/src/l2_sniff.cpp",
+  "file": "/home/dersa/npl/src/l2_sniff.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
   "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/l2_mt_sniff.dir/src/l2_mt_sniff.cpp.o -c /home/dersa/npl/src/l2_mt_sniff.cpp",
   "file": "/home/dersa/npl/src/l2_mt_sniff.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/cPcap_sniff.dir/src/cPcap_sniff.cpp.o -c /home/dersa/npl/src/cPcap_sniff.cpp",
+  "file": "/home/dersa/npl/src/cPcap_sniff.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/pcap_sniff.dir/src/pcap_sniff.cpp.o -c /home/dersa/npl/src/pcap_sniff.cpp",
+  "file": "/home/dersa/npl/src/pcap_sniff.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/pcap_counter.dir/src/pcap_counter.cpp.o -c /home/dersa/npl/src/pcap_counter.cpp",
+  "file": "/home/dersa/npl/src/pcap_counter.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/ip_counter.dir/src/ip_counter.cpp.o -c /home/dersa/npl/src/ip_counter.cpp",
+  "file": "/home/dersa/npl/src/ip_counter.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/bloom_filter.dir/src/bloom_filter.cpp.o -c /home/dersa/npl/src/bloom_filter.cpp",
+  "file": "/home/dersa/npl/src/bloom_filter.cpp"
 },
 {
   "directory": "/home/dersa/npl/build",

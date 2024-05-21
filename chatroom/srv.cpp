@@ -8,7 +8,7 @@
 #include <sys/socket.h>
 #include <map>
 
-typedef std::map< std::string, npl::sockaddress<AF_INET> > SrvMap;
+typedef std::unordered_map< std::string, npl::sockaddress<AF_INET> > SrvMap;
 
 using nlohmann::json;
 
@@ -77,7 +77,7 @@ void chatroom()
                 continue;
             }
 
-            if(m.code.compare("leave"))
+            if(m.code.compare("leave") || m.code.compare("bye"))
             {
                 auto a = srvMap.erase(m.from);
                 if(!a)

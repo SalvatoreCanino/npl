@@ -1,7 +1,6 @@
 #ifndef _MEX_HPP_
 #define _MEX_HPP_
 
-
 #include "json.hpp"
 
 using nlohmann::json;
