@@ -11,11 +11,6 @@
 
 typedef std::tuple<std::string, std::string, int> ip_entry;
 
-union iph {
-    uint64_t num;
-    uint32_t c[2];
-};
-
 struct md_producer{
 
   boost::lockfree::spsc_queue<ip_entry, boost::lockfree::capacity<1024>> queue;
