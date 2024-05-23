@@ -406,6 +406,33 @@ namespace npl {
             return static_cast<unsigned short>(_ptr->th_off << 2);
         }
 
+        bool
+        syn() const
+        {
+            return _ptr->th_flags == TH_SYN;
+            
+            //return (_ptr->th_flags & TH_SYN);
+            //return ((_ptr->syn == 1) ? true : false);
+        }
+
+        bool
+        fin() const
+        {
+            return _ptr->th_flags == TH_FIN;
+            
+            //return (_ptr->th_flags & TH_FIN);
+            //return ((_ptr->fin == 1) ? true : false);
+        }
+
+        bool
+        ack() const
+        {
+            return _ptr->th_flags == TH_ACK;
+            
+            //return (_ptr->th_flags & TH_ACK);
+            //return ((_ptr->ack == 1) ? true : false);
+        }
+
         auto 
         options() const
         {

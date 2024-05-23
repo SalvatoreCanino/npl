@@ -41,6 +41,10 @@ add_executable(ip_counter src/ip_counter.cpp)
 target_link_libraries(ip_counter pcap)
 target_link_libraries(ip_counter -pthread)
 
+add_executable(connection_counter src/connection_counter.cpp)
+target_link_libraries(connection_counter pcap)
+target_link_libraries(connection_counter -pthread)
+
 add_executable(bloom_filter src/bloom_filter.cpp)
 
 add_executable(srv chatroom/srv.cpp)

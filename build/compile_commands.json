@@ -101,6 +101,11 @@
 },
 {
   "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/connection_counter.dir/src/connection_counter.cpp.o -c /home/dersa/npl/src/connection_counter.cpp",
+  "file": "/home/dersa/npl/src/connection_counter.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
   "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -g -std=gnu++20 -o CMakeFiles/bloom_filter.dir/src/bloom_filter.cpp.o -c /home/dersa/npl/src/bloom_filter.cpp",
   "file": "/home/dersa/npl/src/bloom_filter.cpp"
 },

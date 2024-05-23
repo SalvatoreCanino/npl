@@ -83,6 +83,7 @@ all: CMakeFiles/cPcap_sniff.dir/all
 all: CMakeFiles/pcap_sniff.dir/all
 all: CMakeFiles/pcap_counter.dir/all
 all: CMakeFiles/ip_counter.dir/all
+all: CMakeFiles/connection_counter.dir/all
 all: CMakeFiles/bloom_filter.dir/all
 all: CMakeFiles/srv.dir/all
 all: CMakeFiles/clt.dir/all
@@ -113,6 +114,7 @@ clean: CMakeFiles/cPcap_sniff.dir/clean
 clean: CMakeFiles/pcap_sniff.dir/clean
 clean: CMakeFiles/pcap_counter.dir/clean
 clean: CMakeFiles/ip_counter.dir/clean
+clean: CMakeFiles/connection_counter.dir/clean
 clean: CMakeFiles/bloom_filter.dir/clean
 clean: CMakeFiles/srv.dir/clean
 clean: CMakeFiles/clt.dir/clean
@@ -153,7 +155,7 @@ clean: CMakeFiles/ContinuousSubmit.dir/clean
 CMakeFiles/main.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=23,24 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=25,26 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -205,7 +207,7 @@ CMakeFiles/conc.dir/clean:
 CMakeFiles/endianless.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/endianless.dir/build.make CMakeFiles/endianless.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/endianless.dir/build.make CMakeFiles/endianless.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=13,14 "Built target endianless"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=15,16 "Built target endianless"
 .PHONY : CMakeFiles/endianless.dir/all
 
 # Build rule for subdir invocation for target.
@@ -231,7 +233,7 @@ CMakeFiles/endianless.dir/clean:
 CMakeFiles/udp_srv.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=41,42 "Built target udp_srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=43,44 "Built target udp_srv"
 .PHONY : CMakeFiles/udp_srv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -257,7 +259,7 @@ CMakeFiles/udp_srv.dir/clean:
 CMakeFiles/udp_clt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_clt.dir/build.make CMakeFiles/udp_clt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_clt.dir/build.make CMakeFiles/udp_clt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=39,40 "Built target udp_clt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=41,42 "Built target udp_clt"
 .PHONY : CMakeFiles/udp_clt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -283,7 +285,7 @@ CMakeFiles/udp_clt.dir/clean:
 CMakeFiles/tcp_srv_naive.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_naive.dir/build.make CMakeFiles/tcp_srv_naive.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_naive.dir/build.make CMakeFiles/tcp_srv_naive.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=37,38 "Built target tcp_srv_naive"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=39,40 "Built target tcp_srv_naive"
 .PHONY : CMakeFiles/tcp_srv_naive.dir/all
 
 # Build rule for subdir invocation for target.
@@ -309,7 +311,7 @@ CMakeFiles/tcp_srv_naive.dir/clean:
 CMakeFiles/tcp_srv_fork.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_fork.dir/build.make CMakeFiles/tcp_srv_fork.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_fork.dir/build.make CMakeFiles/tcp_srv_fork.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=33,34 "Built target tcp_srv_fork"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=35,36 "Built target tcp_srv_fork"
 .PHONY : CMakeFiles/tcp_srv_fork.dir/all
 
 # Build rule for subdir invocation for target.
@@ -335,7 +337,7 @@ CMakeFiles/tcp_srv_fork.dir/clean:
 CMakeFiles/tcp_srv_multhread.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_multhread.dir/build.make CMakeFiles/tcp_srv_multhread.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_multhread.dir/build.make CMakeFiles/tcp_srv_multhread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=35,36 "Built target tcp_srv_multhread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=37,38 "Built target tcp_srv_multhread"
 .PHONY : CMakeFiles/tcp_srv_multhread.dir/all
 
 # Build rule for subdir invocation for target.
@@ -361,7 +363,7 @@ CMakeFiles/tcp_srv_multhread.dir/clean:
 CMakeFiles/tcp_clt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_clt.dir/build.make CMakeFiles/tcp_clt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_clt.dir/build.make CMakeFiles/tcp_clt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=31,32 "Built target tcp_clt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=33,34 "Built target tcp_clt"
 .PHONY : CMakeFiles/tcp_clt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -439,7 +441,7 @@ CMakeFiles/broadcast_usr.dir/clean:
 CMakeFiles/unix_srv.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_srv.dir/build.make CMakeFiles/unix_srv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_srv.dir/build.make CMakeFiles/unix_srv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=45,46 "Built target unix_srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=47,48 "Built target unix_srv"
 .PHONY : CMakeFiles/unix_srv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -465,7 +467,7 @@ CMakeFiles/unix_srv.dir/clean:
 CMakeFiles/unix_clt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_clt.dir/build.make CMakeFiles/unix_clt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_clt.dir/build.make CMakeFiles/unix_clt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=43,44 "Built target unix_clt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=45,46 "Built target unix_clt"
 .PHONY : CMakeFiles/unix_clt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -491,7 +493,7 @@ CMakeFiles/unix_clt.dir/clean:
 CMakeFiles/l3_sniff.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l3_sniff.dir/build.make CMakeFiles/l3_sniff.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l3_sniff.dir/build.make CMakeFiles/l3_sniff.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=21,22 "Built target l3_sniff"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=23,24 "Built target l3_sniff"
 .PHONY : CMakeFiles/l3_sniff.dir/all
 
 # Build rule for subdir invocation for target.
@@ -517,7 +519,7 @@ CMakeFiles/l3_sniff.dir/clean:
 CMakeFiles/l2_sniff.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_sniff.dir/build.make CMakeFiles/l2_sniff.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_sniff.dir/build.make CMakeFiles/l2_sniff.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=19,20 "Built target l2_sniff"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=21,22 "Built target l2_sniff"
 .PHONY : CMakeFiles/l2_sniff.dir/all
 
 # Build rule for subdir invocation for target.
@@ -543,7 +545,7 @@ CMakeFiles/l2_sniff.dir/clean:
 CMakeFiles/l2_mt_sniff.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_mt_sniff.dir/build.make CMakeFiles/l2_mt_sniff.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_mt_sniff.dir/build.make CMakeFiles/l2_mt_sniff.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=17,18 "Built target l2_mt_sniff"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=19,20 "Built target l2_mt_sniff"
 .PHONY : CMakeFiles/l2_mt_sniff.dir/all
 
 # Build rule for subdir invocation for target.
@@ -595,7 +597,7 @@ CMakeFiles/cPcap_sniff.dir/clean:
 CMakeFiles/pcap_sniff.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcap_sniff.dir/build.make CMakeFiles/pcap_sniff.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcap_sniff.dir/build.make CMakeFiles/pcap_sniff.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=27,28 "Built target pcap_sniff"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=29,30 "Built target pcap_sniff"
 .PHONY : CMakeFiles/pcap_sniff.dir/all
 
 # Build rule for subdir invocation for target.
@@ -621,7 +623,7 @@ CMakeFiles/pcap_sniff.dir/clean:
 CMakeFiles/pcap_counter.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcap_counter.dir/build.make CMakeFiles/pcap_counter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcap_counter.dir/build.make CMakeFiles/pcap_counter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=25,26 "Built target pcap_counter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=27,28 "Built target pcap_counter"
 .PHONY : CMakeFiles/pcap_counter.dir/all
 
 # Build rule for subdir invocation for target.
@@ -647,7 +649,7 @@ CMakeFiles/pcap_counter.dir/clean:
 CMakeFiles/ip_counter.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ip_counter.dir/build.make CMakeFiles/ip_counter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ip_counter.dir/build.make CMakeFiles/ip_counter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=15,16 "Built target ip_counter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=17,18 "Built target ip_counter"
 .PHONY : CMakeFiles/ip_counter.dir/all
 
 # Build rule for subdir invocation for target.
@@ -665,6 +667,32 @@ ip_counter: CMakeFiles/ip_counter.dir/rule
 CMakeFiles/ip_counter.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ip_counter.dir/build.make CMakeFiles/ip_counter.dir/clean
 .PHONY : CMakeFiles/ip_counter.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/connection_counter.dir
+
+# All Build rule for target.
+CMakeFiles/connection_counter.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/connection_counter.dir/build.make CMakeFiles/connection_counter.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/connection_counter.dir/build.make CMakeFiles/connection_counter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=13,14 "Built target connection_counter"
+.PHONY : CMakeFiles/connection_counter.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/connection_counter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dersa/npl/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/connection_counter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dersa/npl/build/CMakeFiles 0
+.PHONY : CMakeFiles/connection_counter.dir/rule
+
+# Convenience name for target.
+connection_counter: CMakeFiles/connection_counter.dir/rule
+.PHONY : connection_counter
+
+# clean rule for target.
+CMakeFiles/connection_counter.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/connection_counter.dir/build.make CMakeFiles/connection_counter.dir/clean
+.PHONY : CMakeFiles/connection_counter.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/bloom_filter.dir
@@ -699,7 +727,7 @@ CMakeFiles/bloom_filter.dir/clean:
 CMakeFiles/srv.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=29,30 "Built target srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=31,32 "Built target srv"
 .PHONY : CMakeFiles/srv.dir/all
 
 # Build rule for subdir invocation for target.

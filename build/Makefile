@@ -407,6 +407,19 @@ ip_counter/fast:
 .PHONY : ip_counter/fast
 
 #=============================================================================
+# Target rules for targets named connection_counter
+
+# Build rule for target.
+connection_counter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 connection_counter
+.PHONY : connection_counter
+
+# fast build rule for target.
+connection_counter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/connection_counter.dir/build.make CMakeFiles/connection_counter.dir/build
+.PHONY : connection_counter/fast
+
+#=============================================================================
 # Target rules for targets named bloom_filter
 
 # Build rule for target.
@@ -977,6 +990,30 @@ src/conc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conc.dir/build.make CMakeFiles/conc.dir/src/conc.cpp.s
 .PHONY : src/conc.cpp.s
 
+src/connection_counter.o: src/connection_counter.cpp.o
+.PHONY : src/connection_counter.o
+
+# target to build an object file
+src/connection_counter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/connection_counter.dir/build.make CMakeFiles/connection_counter.dir/src/connection_counter.cpp.o
+.PHONY : src/connection_counter.cpp.o
+
+src/connection_counter.i: src/connection_counter.cpp.i
+.PHONY : src/connection_counter.i
+
+# target to preprocess a source file
+src/connection_counter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/connection_counter.dir/build.make CMakeFiles/connection_counter.dir/src/connection_counter.cpp.i
+.PHONY : src/connection_counter.cpp.i
+
+src/connection_counter.s: src/connection_counter.cpp.s
+.PHONY : src/connection_counter.s
+
+# target to generate assembly for a file
+src/connection_counter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/connection_counter.dir/build.make CMakeFiles/connection_counter.dir/src/connection_counter.cpp.s
+.PHONY : src/connection_counter.cpp.s
+
 src/endianless.o: src/endianless.cpp.o
 .PHONY : src/endianless.o
 
@@ -1406,6 +1443,7 @@ help:
 	@echo "... cPcap_sniff"
 	@echo "... clt"
 	@echo "... conc"
+	@echo "... connection_counter"
 	@echo "... endianless"
 	@echo "... ip_counter"
 	@echo "... l2_mt_sniff"
@@ -1444,6 +1482,9 @@ help:
 	@echo "... src/conc.o"
 	@echo "... src/conc.i"
 	@echo "... src/conc.s"
+	@echo "... src/connection_counter.o"
+	@echo "... src/connection_counter.i"
+	@echo "... src/connection_counter.s"
 	@echo "... src/endianless.o"
 	@echo "... src/endianless.i"
 	@echo "... src/endianless.s"

@@ -18,6 +18,7 @@
 /home/dersa/npl/build/CMakeFiles/pcap_sniff.dir
 /home/dersa/npl/build/CMakeFiles/pcap_counter.dir
 /home/dersa/npl/build/CMakeFiles/ip_counter.dir
+/home/dersa/npl/build/CMakeFiles/connection_counter.dir
 /home/dersa/npl/build/CMakeFiles/bloom_filter.dir
 /home/dersa/npl/build/CMakeFiles/srv.dir
 /home/dersa/npl/build/CMakeFiles/clt.dir
