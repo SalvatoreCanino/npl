@@ -60,7 +60,6 @@ int main(int argc, char *argv[]) {
       tap.print_bpf_program();
     }
     tap.loop(elab);
-
   }
 
   std::cout << "Number of processed packets: " << elab._cnt << std::endl;

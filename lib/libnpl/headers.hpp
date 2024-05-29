@@ -393,7 +393,8 @@ namespace npl {
         c_hdr() const
         {
             return *_ptr;
-        } 
+        }
+
         unsigned short
         dstport() const{
             return ntohs(_ptr->th_dport);
@@ -406,31 +407,11 @@ namespace npl {
             return static_cast<unsigned short>(_ptr->th_off << 2);
         }
 
-        bool
+        bool 
         syn() const
         {
-            return _ptr->th_flags == TH_SYN;
-            
-            //return (_ptr->th_flags & TH_SYN);
-            //return ((_ptr->syn == 1) ? true : false);
-        }
-
-        bool
-        fin() const
-        {
-            return _ptr->th_flags == TH_FIN;
-            
-            //return (_ptr->th_flags & TH_FIN);
-            //return ((_ptr->fin == 1) ? true : false);
-        }
-
-        bool
-        ack() const
-        {
-            return _ptr->th_flags == TH_ACK;
-            
-            //return (_ptr->th_flags & TH_ACK);
-            //return ((_ptr->ack == 1) ? true : false);
+            return ((_ptr->th_flags & TH_SYN) == TH_SYN);
+            // return static_cast<bool>(-_ptr->syn);
         }
 
         auto 

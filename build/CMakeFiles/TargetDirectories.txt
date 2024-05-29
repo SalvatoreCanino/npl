@@ -22,6 +22,10 @@
 /home/dersa/npl/build/CMakeFiles/bloom_filter.dir
 /home/dersa/npl/build/CMakeFiles/srv.dir
 /home/dersa/npl/build/CMakeFiles/clt.dir
+/home/dersa/npl/build/CMakeFiles/probes.dir
+/home/dersa/npl/build/CMakeFiles/collector.dir
+/home/dersa/npl/build/CMakeFiles/fortune_clt.dir
+/home/dersa/npl/build/CMakeFiles/fortune_srv.dir
 /home/dersa/npl/build/CMakeFiles/Experimental.dir
 /home/dersa/npl/build/CMakeFiles/Nightly.dir
 /home/dersa/npl/build/CMakeFiles/Continuous.dir

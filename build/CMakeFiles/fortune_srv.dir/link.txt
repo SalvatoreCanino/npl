@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/fortune_srv.dir/esami/18-07-22/fortune_srv.cpp.o -o fortune_srv 

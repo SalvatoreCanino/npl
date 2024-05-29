@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/collector.dir/esami/27-06-22/collector.cpp.o -o collector 

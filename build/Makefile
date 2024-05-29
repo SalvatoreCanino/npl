@@ -459,6 +459,58 @@ clt/fast:
 .PHONY : clt/fast
 
 #=============================================================================
+# Target rules for targets named probes
+
+# Build rule for target.
+probes: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 probes
+.PHONY : probes
+
+# fast build rule for target.
+probes/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/probes.dir/build.make CMakeFiles/probes.dir/build
+.PHONY : probes/fast
+
+#=============================================================================
+# Target rules for targets named collector
+
+# Build rule for target.
+collector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 collector
+.PHONY : collector
+
+# fast build rule for target.
+collector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/collector.dir/build.make CMakeFiles/collector.dir/build
+.PHONY : collector/fast
+
+#=============================================================================
+# Target rules for targets named fortune_clt
+
+# Build rule for target.
+fortune_clt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fortune_clt
+.PHONY : fortune_clt
+
+# fast build rule for target.
+fortune_clt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_clt.dir/build.make CMakeFiles/fortune_clt.dir/build
+.PHONY : fortune_clt/fast
+
+#=============================================================================
+# Target rules for targets named fortune_srv
+
+# Build rule for target.
+fortune_srv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fortune_srv
+.PHONY : fortune_srv
+
+# fast build rule for target.
+fortune_srv/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_srv.dir/build.make CMakeFiles/fortune_srv.dir/build
+.PHONY : fortune_srv/fast
+
+#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -869,6 +921,102 @@ chatroom/srv.s: chatroom/srv.cpp.s
 chatroom/srv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/chatroom/srv.cpp.s
 .PHONY : chatroom/srv.cpp.s
+
+esami/18-07-22/fortune_clt.o: esami/18-07-22/fortune_clt.cpp.o
+.PHONY : esami/18-07-22/fortune_clt.o
+
+# target to build an object file
+esami/18-07-22/fortune_clt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_clt.dir/build.make CMakeFiles/fortune_clt.dir/esami/18-07-22/fortune_clt.cpp.o
+.PHONY : esami/18-07-22/fortune_clt.cpp.o
+
+esami/18-07-22/fortune_clt.i: esami/18-07-22/fortune_clt.cpp.i
+.PHONY : esami/18-07-22/fortune_clt.i
+
+# target to preprocess a source file
+esami/18-07-22/fortune_clt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_clt.dir/build.make CMakeFiles/fortune_clt.dir/esami/18-07-22/fortune_clt.cpp.i
+.PHONY : esami/18-07-22/fortune_clt.cpp.i
+
+esami/18-07-22/fortune_clt.s: esami/18-07-22/fortune_clt.cpp.s
+.PHONY : esami/18-07-22/fortune_clt.s
+
+# target to generate assembly for a file
+esami/18-07-22/fortune_clt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_clt.dir/build.make CMakeFiles/fortune_clt.dir/esami/18-07-22/fortune_clt.cpp.s
+.PHONY : esami/18-07-22/fortune_clt.cpp.s
+
+esami/18-07-22/fortune_srv.o: esami/18-07-22/fortune_srv.cpp.o
+.PHONY : esami/18-07-22/fortune_srv.o
+
+# target to build an object file
+esami/18-07-22/fortune_srv.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_srv.dir/build.make CMakeFiles/fortune_srv.dir/esami/18-07-22/fortune_srv.cpp.o
+.PHONY : esami/18-07-22/fortune_srv.cpp.o
+
+esami/18-07-22/fortune_srv.i: esami/18-07-22/fortune_srv.cpp.i
+.PHONY : esami/18-07-22/fortune_srv.i
+
+# target to preprocess a source file
+esami/18-07-22/fortune_srv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_srv.dir/build.make CMakeFiles/fortune_srv.dir/esami/18-07-22/fortune_srv.cpp.i
+.PHONY : esami/18-07-22/fortune_srv.cpp.i
+
+esami/18-07-22/fortune_srv.s: esami/18-07-22/fortune_srv.cpp.s
+.PHONY : esami/18-07-22/fortune_srv.s
+
+# target to generate assembly for a file
+esami/18-07-22/fortune_srv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_srv.dir/build.make CMakeFiles/fortune_srv.dir/esami/18-07-22/fortune_srv.cpp.s
+.PHONY : esami/18-07-22/fortune_srv.cpp.s
+
+esami/27-06-22/collector.o: esami/27-06-22/collector.cpp.o
+.PHONY : esami/27-06-22/collector.o
+
+# target to build an object file
+esami/27-06-22/collector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/collector.dir/build.make CMakeFiles/collector.dir/esami/27-06-22/collector.cpp.o
+.PHONY : esami/27-06-22/collector.cpp.o
+
+esami/27-06-22/collector.i: esami/27-06-22/collector.cpp.i
+.PHONY : esami/27-06-22/collector.i
+
+# target to preprocess a source file
+esami/27-06-22/collector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/collector.dir/build.make CMakeFiles/collector.dir/esami/27-06-22/collector.cpp.i
+.PHONY : esami/27-06-22/collector.cpp.i
+
+esami/27-06-22/collector.s: esami/27-06-22/collector.cpp.s
+.PHONY : esami/27-06-22/collector.s
+
+# target to generate assembly for a file
+esami/27-06-22/collector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/collector.dir/build.make CMakeFiles/collector.dir/esami/27-06-22/collector.cpp.s
+.PHONY : esami/27-06-22/collector.cpp.s
+
+esami/27-06-22/probes.o: esami/27-06-22/probes.cpp.o
+.PHONY : esami/27-06-22/probes.o
+
+# target to build an object file
+esami/27-06-22/probes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/probes.dir/build.make CMakeFiles/probes.dir/esami/27-06-22/probes.cpp.o
+.PHONY : esami/27-06-22/probes.cpp.o
+
+esami/27-06-22/probes.i: esami/27-06-22/probes.cpp.i
+.PHONY : esami/27-06-22/probes.i
+
+# target to preprocess a source file
+esami/27-06-22/probes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/probes.dir/build.make CMakeFiles/probes.dir/esami/27-06-22/probes.cpp.i
+.PHONY : esami/27-06-22/probes.cpp.i
+
+esami/27-06-22/probes.s: esami/27-06-22/probes.cpp.s
+.PHONY : esami/27-06-22/probes.s
+
+# target to generate assembly for a file
+esami/27-06-22/probes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/probes.dir/build.make CMakeFiles/probes.dir/esami/27-06-22/probes.cpp.s
+.PHONY : esami/27-06-22/probes.cpp.s
 
 src/bloom_filter.o: src/bloom_filter.cpp.o
 .PHONY : src/bloom_filter.o
@@ -1442,9 +1590,12 @@ help:
 	@echo "... broadcast_usr"
 	@echo "... cPcap_sniff"
 	@echo "... clt"
+	@echo "... collector"
 	@echo "... conc"
 	@echo "... connection_counter"
 	@echo "... endianless"
+	@echo "... fortune_clt"
+	@echo "... fortune_srv"
 	@echo "... ip_counter"
 	@echo "... l2_mt_sniff"
 	@echo "... l2_sniff"
@@ -1452,6 +1603,7 @@ help:
 	@echo "... main"
 	@echo "... pcap_counter"
 	@echo "... pcap_sniff"
+	@echo "... probes"
 	@echo "... srv"
 	@echo "... tcp_clt"
 	@echo "... tcp_srv_fork"
@@ -1467,6 +1619,18 @@ help:
 	@echo "... chatroom/srv.o"
 	@echo "... chatroom/srv.i"
 	@echo "... chatroom/srv.s"
+	@echo "... esami/18-07-22/fortune_clt.o"
+	@echo "... esami/18-07-22/fortune_clt.i"
+	@echo "... esami/18-07-22/fortune_clt.s"
+	@echo "... esami/18-07-22/fortune_srv.o"
+	@echo "... esami/18-07-22/fortune_srv.i"
+	@echo "... esami/18-07-22/fortune_srv.s"
+	@echo "... esami/27-06-22/collector.o"
+	@echo "... esami/27-06-22/collector.i"
+	@echo "... esami/27-06-22/collector.s"
+	@echo "... esami/27-06-22/probes.o"
+	@echo "... esami/27-06-22/probes.i"
+	@echo "... esami/27-06-22/probes.s"
 	@echo "... src/bloom_filter.o"
 	@echo "... src/bloom_filter.i"
 	@echo "... src/bloom_filter.s"

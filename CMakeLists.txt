@@ -8,7 +8,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 include_directories(lib/libnpl)
 include_directories(lib/nlohmann)
 include_directories(lib/libchat)
-
+include_directories(esami/18-07-22)
 
 add_executable(main src/main.cpp)
 add_executable(conc src/conc.cpp)
@@ -49,6 +49,14 @@ add_executable(bloom_filter src/bloom_filter.cpp)
 
 add_executable(srv chatroom/srv.cpp)
 add_executable(clt chatroom/clt.cpp)
+
+add_executable(probes esami/27-06-22/probes.cpp)
+target_link_libraries(probes pcap)
+add_executable(collector esami/27-06-22/collector.cpp)
+
+add_executable(fortune_clt esami/18-07-22/fortune_clt.cpp)
+add_executable(fortune_srv esami/18-07-22/fortune_srv.cpp)
+
 
 include(CTest)
 enable_testing()

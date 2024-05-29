@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/fortune_clt.dir/esami/18-07-22/fortune_clt.cpp.o -o fortune_clt 
