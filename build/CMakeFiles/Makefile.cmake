@@ -81,6 +81,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/collector.dir/DependInfo.cmake"
   "CMakeFiles/fortune_clt.dir/DependInfo.cmake"
   "CMakeFiles/fortune_srv.dir/DependInfo.cmake"
+  "CMakeFiles/single_traffic_processor.dir/DependInfo.cmake"
   "CMakeFiles/Experimental.dir/DependInfo.cmake"
   "CMakeFiles/Nightly.dir/DependInfo.cmake"
   "CMakeFiles/Continuous.dir/DependInfo.cmake"

@@ -26,6 +26,7 @@
 /home/dersa/npl/build/CMakeFiles/collector.dir
 /home/dersa/npl/build/CMakeFiles/fortune_clt.dir
 /home/dersa/npl/build/CMakeFiles/fortune_srv.dir
+/home/dersa/npl/build/CMakeFiles/single_traffic_processor.dir
 /home/dersa/npl/build/CMakeFiles/Experimental.dir
 /home/dersa/npl/build/CMakeFiles/Nightly.dir
 /home/dersa/npl/build/CMakeFiles/Continuous.dir

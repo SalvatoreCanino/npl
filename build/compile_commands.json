@@ -138,5 +138,10 @@
   "directory": "/home/dersa/npl/build",
   "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -I/home/dersa/npl/esami/18-07-22 -g -std=gnu++20 -o CMakeFiles/fortune_srv.dir/esami/18-07-22/fortune_srv.cpp.o -c /home/dersa/npl/esami/18-07-22/fortune_srv.cpp",
   "file": "/home/dersa/npl/esami/18-07-22/fortune_srv.cpp"
+},
+{
+  "directory": "/home/dersa/npl/build",
+  "command": "/usr/bin/g++  -I/home/dersa/npl/lib/libnpl -I/home/dersa/npl/lib/nlohmann -I/home/dersa/npl/lib/libchat -I/home/dersa/npl/esami/18-07-22 -g -std=gnu++20 -o CMakeFiles/single_traffic_processor.dir/esami/18-11-22/single_traffic_processor.cpp.o -c /home/dersa/npl/esami/18-11-22/single_traffic_processor.cpp",
+  "file": "/home/dersa/npl/esami/18-11-22/single_traffic_processor.cpp"
 }
 ]

@@ -91,6 +91,7 @@ all: CMakeFiles/probes.dir/all
 all: CMakeFiles/collector.dir/all
 all: CMakeFiles/fortune_clt.dir/all
 all: CMakeFiles/fortune_srv.dir/all
+all: CMakeFiles/single_traffic_processor.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -126,6 +127,7 @@ clean: CMakeFiles/probes.dir/clean
 clean: CMakeFiles/collector.dir/clean
 clean: CMakeFiles/fortune_clt.dir/clean
 clean: CMakeFiles/fortune_srv.dir/clean
+clean: CMakeFiles/single_traffic_processor.dir/clean
 clean: CMakeFiles/Experimental.dir/clean
 clean: CMakeFiles/Nightly.dir/clean
 clean: CMakeFiles/Continuous.dir/clean
@@ -241,7 +243,7 @@ CMakeFiles/endianless.dir/clean:
 CMakeFiles/udp_srv.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_srv.dir/build.make CMakeFiles/udp_srv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=51,52 "Built target udp_srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=53,54 "Built target udp_srv"
 .PHONY : CMakeFiles/udp_srv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -267,7 +269,7 @@ CMakeFiles/udp_srv.dir/clean:
 CMakeFiles/udp_clt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_clt.dir/build.make CMakeFiles/udp_clt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udp_clt.dir/build.make CMakeFiles/udp_clt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=49,50 "Built target udp_clt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=51,52 "Built target udp_clt"
 .PHONY : CMakeFiles/udp_clt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -293,7 +295,7 @@ CMakeFiles/udp_clt.dir/clean:
 CMakeFiles/tcp_srv_naive.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_naive.dir/build.make CMakeFiles/tcp_srv_naive.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_naive.dir/build.make CMakeFiles/tcp_srv_naive.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=47,48 "Built target tcp_srv_naive"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=49,50 "Built target tcp_srv_naive"
 .PHONY : CMakeFiles/tcp_srv_naive.dir/all
 
 # Build rule for subdir invocation for target.
@@ -319,7 +321,7 @@ CMakeFiles/tcp_srv_naive.dir/clean:
 CMakeFiles/tcp_srv_fork.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_fork.dir/build.make CMakeFiles/tcp_srv_fork.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_fork.dir/build.make CMakeFiles/tcp_srv_fork.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=43,44 "Built target tcp_srv_fork"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=45,46 "Built target tcp_srv_fork"
 .PHONY : CMakeFiles/tcp_srv_fork.dir/all
 
 # Build rule for subdir invocation for target.
@@ -345,7 +347,7 @@ CMakeFiles/tcp_srv_fork.dir/clean:
 CMakeFiles/tcp_srv_multhread.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_multhread.dir/build.make CMakeFiles/tcp_srv_multhread.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_srv_multhread.dir/build.make CMakeFiles/tcp_srv_multhread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=45,46 "Built target tcp_srv_multhread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=47,48 "Built target tcp_srv_multhread"
 .PHONY : CMakeFiles/tcp_srv_multhread.dir/all
 
 # Build rule for subdir invocation for target.
@@ -371,7 +373,7 @@ CMakeFiles/tcp_srv_multhread.dir/clean:
 CMakeFiles/tcp_clt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_clt.dir/build.make CMakeFiles/tcp_clt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tcp_clt.dir/build.make CMakeFiles/tcp_clt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=41,42 "Built target tcp_clt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=43,44 "Built target tcp_clt"
 .PHONY : CMakeFiles/tcp_clt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -449,7 +451,7 @@ CMakeFiles/broadcast_usr.dir/clean:
 CMakeFiles/unix_srv.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_srv.dir/build.make CMakeFiles/unix_srv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_srv.dir/build.make CMakeFiles/unix_srv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=55,56 "Built target unix_srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=57,58 "Built target unix_srv"
 .PHONY : CMakeFiles/unix_srv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -475,7 +477,7 @@ CMakeFiles/unix_srv.dir/clean:
 CMakeFiles/unix_clt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_clt.dir/build.make CMakeFiles/unix_clt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unix_clt.dir/build.make CMakeFiles/unix_clt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=53,54 "Built target unix_clt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=55,56 "Built target unix_clt"
 .PHONY : CMakeFiles/unix_clt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -735,7 +737,7 @@ CMakeFiles/bloom_filter.dir/clean:
 CMakeFiles/srv.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/srv.dir/build.make CMakeFiles/srv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=39,40 "Built target srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=41,42 "Built target srv"
 .PHONY : CMakeFiles/srv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -883,6 +885,32 @@ fortune_srv: CMakeFiles/fortune_srv.dir/rule
 CMakeFiles/fortune_srv.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_srv.dir/build.make CMakeFiles/fortune_srv.dir/clean
 .PHONY : CMakeFiles/fortune_srv.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/single_traffic_processor.dir
+
+# All Build rule for target.
+CMakeFiles/single_traffic_processor.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/single_traffic_processor.dir/build.make CMakeFiles/single_traffic_processor.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/single_traffic_processor.dir/build.make CMakeFiles/single_traffic_processor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dersa/npl/build/CMakeFiles --progress-num=39,40 "Built target single_traffic_processor"
+.PHONY : CMakeFiles/single_traffic_processor.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/single_traffic_processor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dersa/npl/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/single_traffic_processor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dersa/npl/build/CMakeFiles 0
+.PHONY : CMakeFiles/single_traffic_processor.dir/rule
+
+# Convenience name for target.
+single_traffic_processor: CMakeFiles/single_traffic_processor.dir/rule
+.PHONY : single_traffic_processor
+
+# clean rule for target.
+CMakeFiles/single_traffic_processor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/single_traffic_processor.dir/build.make CMakeFiles/single_traffic_processor.dir/clean
+.PHONY : CMakeFiles/single_traffic_processor.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Experimental.dir

@@ -511,6 +511,19 @@ fortune_srv/fast:
 .PHONY : fortune_srv/fast
 
 #=============================================================================
+# Target rules for targets named single_traffic_processor
+
+# Build rule for target.
+single_traffic_processor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 single_traffic_processor
+.PHONY : single_traffic_processor
+
+# fast build rule for target.
+single_traffic_processor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/single_traffic_processor.dir/build.make CMakeFiles/single_traffic_processor.dir/build
+.PHONY : single_traffic_processor/fast
+
+#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -969,6 +982,30 @@ esami/18-07-22/fortune_srv.s: esami/18-07-22/fortune_srv.cpp.s
 esami/18-07-22/fortune_srv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fortune_srv.dir/build.make CMakeFiles/fortune_srv.dir/esami/18-07-22/fortune_srv.cpp.s
 .PHONY : esami/18-07-22/fortune_srv.cpp.s
+
+esami/18-11-22/single_traffic_processor.o: esami/18-11-22/single_traffic_processor.cpp.o
+.PHONY : esami/18-11-22/single_traffic_processor.o
+
+# target to build an object file
+esami/18-11-22/single_traffic_processor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/single_traffic_processor.dir/build.make CMakeFiles/single_traffic_processor.dir/esami/18-11-22/single_traffic_processor.cpp.o
+.PHONY : esami/18-11-22/single_traffic_processor.cpp.o
+
+esami/18-11-22/single_traffic_processor.i: esami/18-11-22/single_traffic_processor.cpp.i
+.PHONY : esami/18-11-22/single_traffic_processor.i
+
+# target to preprocess a source file
+esami/18-11-22/single_traffic_processor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/single_traffic_processor.dir/build.make CMakeFiles/single_traffic_processor.dir/esami/18-11-22/single_traffic_processor.cpp.i
+.PHONY : esami/18-11-22/single_traffic_processor.cpp.i
+
+esami/18-11-22/single_traffic_processor.s: esami/18-11-22/single_traffic_processor.cpp.s
+.PHONY : esami/18-11-22/single_traffic_processor.s
+
+# target to generate assembly for a file
+esami/18-11-22/single_traffic_processor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/single_traffic_processor.dir/build.make CMakeFiles/single_traffic_processor.dir/esami/18-11-22/single_traffic_processor.cpp.s
+.PHONY : esami/18-11-22/single_traffic_processor.cpp.s
 
 esami/27-06-22/collector.o: esami/27-06-22/collector.cpp.o
 .PHONY : esami/27-06-22/collector.o
@@ -1604,6 +1641,7 @@ help:
 	@echo "... pcap_counter"
 	@echo "... pcap_sniff"
 	@echo "... probes"
+	@echo "... single_traffic_processor"
 	@echo "... srv"
 	@echo "... tcp_clt"
 	@echo "... tcp_srv_fork"
@@ -1625,6 +1663,9 @@ help:
 	@echo "... esami/18-07-22/fortune_srv.o"
 	@echo "... esami/18-07-22/fortune_srv.i"
 	@echo "... esami/18-07-22/fortune_srv.s"
+	@echo "... esami/18-11-22/single_traffic_processor.o"
+	@echo "... esami/18-11-22/single_traffic_processor.i"
+	@echo "... esami/18-11-22/single_traffic_processor.s"
 	@echo "... esami/27-06-22/collector.o"
 	@echo "... esami/27-06-22/collector.i"
 	@echo "... esami/27-06-22/collector.s"

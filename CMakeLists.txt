@@ -57,6 +57,8 @@ add_executable(collector esami/27-06-22/collector.cpp)
 add_executable(fortune_clt esami/18-07-22/fortune_clt.cpp)
 add_executable(fortune_srv esami/18-07-22/fortune_srv.cpp)
 
+add_executable(single_traffic_processor esami/18-11-22/single_traffic_processor.cpp)
+target_link_libraries(single_traffic_processor pcap)
 
 include(CTest)
 enable_testing()
